@@ -29,40 +29,30 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.StorageInDeliveryDgv = new MetroFramework.Controls.MetroGrid();
-            this.DeliveryNoteDgv = new MetroFramework.Controls.MetroGrid();
-            this.DeliveryStorageDgv = new MetroFramework.Controls.MetroGrid();
-            this.CreateDeliveryNoteBtn = new MetroFramework.Controls.MetroButton();
-            this.CreateOrderNoteBtn = new MetroFramework.Controls.MetroButton();
-            this.AddItemToDeliveryBtn = new MetroFramework.Controls.MetroButton();
-            this.DeleteDeliveryNoteBtn = new MetroFramework.Controls.MetroButton();
-            this.DeleteItemFromDeliveryBtn = new MetroFramework.Controls.MetroButton();
-            this.AddItemsInOrderToStorageBtn = new MetroFramework.Controls.MetroButton();
-            this.itemsInStockDeliveryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.zltMgx2tGNDataSet1 = new StorageProgram.zltMgx2tGNDataSet1();
-            this.deliveryNoteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.itemIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemCountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemPurchasePriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.storageBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.storageTableAdapter = new StorageProgram.zltMgx2tGNDataSet1TableAdapters.StorageTableAdapter();
-            this.deliveryNoteTableAdapter = new StorageProgram.zltMgx2tGNDataSet1TableAdapters.DeliveryNoteTableAdapter();
-            this.itemsInStockDeliveryTableAdapter = new StorageProgram.zltMgx2tGNDataSet1TableAdapters.ItemsInStockDeliveryTableAdapter();
+            this.zltMgx2tGNDataSet1 = new StorageProgram.zltMgx2tGNDataSet1();
+            this.DeliveryNoteDgv = new MetroFramework.Controls.MetroGrid();
             this.deliveryNoteIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deliveryNoteIndicationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deliveryNoteCountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deliveryNoteOrderOrDeliveryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deliveryNoteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DeliveryStorageDgv = new MetroFramework.Controls.MetroGrid();
             this.itemInDeliveryIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemInDeliveryNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemInDeliveryCountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,13 +61,23 @@
             this.itemInDeliveryFromItemInStockIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemInDeliveryFromDeliveryNoteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemInDeliveryOrderOrDeliveryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemsInStockDeliveryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.CreateDeliveryNoteBtn = new MetroFramework.Controls.MetroButton();
+            this.CreateOrderNoteBtn = new MetroFramework.Controls.MetroButton();
+            this.AddItemToDeliveryBtn = new MetroFramework.Controls.MetroButton();
+            this.DeleteDeliveryNoteBtn = new MetroFramework.Controls.MetroButton();
+            this.DeleteItemFromDeliveryBtn = new MetroFramework.Controls.MetroButton();
+            this.AddItemsInOrderToStorageBtn = new MetroFramework.Controls.MetroButton();
+            this.storageTableAdapter = new StorageProgram.zltMgx2tGNDataSet1TableAdapters.StorageTableAdapter();
+            this.deliveryNoteTableAdapter = new StorageProgram.zltMgx2tGNDataSet1TableAdapters.DeliveryNoteTableAdapter();
+            this.itemsInStockDeliveryTableAdapter = new StorageProgram.zltMgx2tGNDataSet1TableAdapters.ItemsInStockDeliveryTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.StorageInDeliveryDgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zltMgx2tGNDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeliveryNoteDgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deliveryNoteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeliveryStorageDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsInStockDeliveryBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zltMgx2tGNDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deliveryNoteBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // StorageInDeliveryDgv
@@ -89,14 +89,14 @@
             this.StorageInDeliveryDgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.StorageInDeliveryDgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.StorageInDeliveryDgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.StorageInDeliveryDgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.StorageInDeliveryDgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.StorageInDeliveryDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.StorageInDeliveryDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.itemIdDataGridViewTextBoxColumn,
@@ -105,222 +105,36 @@
             this.itemDescriptionDataGridViewTextBoxColumn,
             this.itemPurchasePriceDataGridViewTextBoxColumn});
             this.StorageInDeliveryDgv.DataSource = this.storageBindingSource;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.StorageInDeliveryDgv.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.StorageInDeliveryDgv.DefaultCellStyle = dataGridViewCellStyle2;
             this.StorageInDeliveryDgv.EnableHeadersVisualStyles = false;
             this.StorageInDeliveryDgv.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.StorageInDeliveryDgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.StorageInDeliveryDgv.Location = new System.Drawing.Point(32, 110);
+            this.StorageInDeliveryDgv.Location = new System.Drawing.Point(23, 63);
             this.StorageInDeliveryDgv.Name = "StorageInDeliveryDgv";
             this.StorageInDeliveryDgv.ReadOnly = true;
             this.StorageInDeliveryDgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.StorageInDeliveryDgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.StorageInDeliveryDgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.StorageInDeliveryDgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.StorageInDeliveryDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.StorageInDeliveryDgv.Size = new System.Drawing.Size(528, 359);
+            this.StorageInDeliveryDgv.Size = new System.Drawing.Size(490, 746);
             this.StorageInDeliveryDgv.TabIndex = 0;
             this.StorageInDeliveryDgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StorageInDeliveryDgv_CellClick);
             this.StorageInDeliveryDgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StorageInDeliveryDgv_CellContentClick);
             this.StorageInDeliveryDgv.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StorageInDeliveryDgv_CellContentDoubleClick);
-            // 
-            // DeliveryNoteDgv
-            // 
-            this.DeliveryNoteDgv.AllowUserToAddRows = false;
-            this.DeliveryNoteDgv.AllowUserToResizeRows = false;
-            this.DeliveryNoteDgv.AutoGenerateColumns = false;
-            this.DeliveryNoteDgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.DeliveryNoteDgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DeliveryNoteDgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.DeliveryNoteDgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DeliveryNoteDgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
-            this.DeliveryNoteDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DeliveryNoteDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.deliveryNoteIdDataGridViewTextBoxColumn,
-            this.deliveryNoteIndicationDataGridViewTextBoxColumn,
-            this.deliveryNoteCountDataGridViewTextBoxColumn,
-            this.deliveryNoteOrderOrDeliveryDataGridViewTextBoxColumn});
-            this.DeliveryNoteDgv.DataSource = this.deliveryNoteBindingSource;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DeliveryNoteDgv.DefaultCellStyle = dataGridViewCellStyle14;
-            this.DeliveryNoteDgv.EnableHeadersVisualStyles = false;
-            this.DeliveryNoteDgv.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.DeliveryNoteDgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.DeliveryNoteDgv.Location = new System.Drawing.Point(863, 63);
-            this.DeliveryNoteDgv.Name = "DeliveryNoteDgv";
-            this.DeliveryNoteDgv.ReadOnly = true;
-            this.DeliveryNoteDgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DeliveryNoteDgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
-            this.DeliveryNoteDgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.DeliveryNoteDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DeliveryNoteDgv.Size = new System.Drawing.Size(570, 209);
-            this.DeliveryNoteDgv.TabIndex = 1;
-            this.DeliveryNoteDgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DeliveryNoteDgv_CellClick);
-            this.DeliveryNoteDgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DeliveryNoteDgv_CellContentClick);
-            this.DeliveryNoteDgv.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DeliveryNoteDgv_CellContentDoubleClick);
-            // 
-            // DeliveryStorageDgv
-            // 
-            this.DeliveryStorageDgv.AllowUserToAddRows = false;
-            this.DeliveryStorageDgv.AllowUserToResizeRows = false;
-            this.DeliveryStorageDgv.AutoGenerateColumns = false;
-            this.DeliveryStorageDgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.DeliveryStorageDgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DeliveryStorageDgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.DeliveryStorageDgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DeliveryStorageDgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
-            this.DeliveryStorageDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DeliveryStorageDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.itemInDeliveryIdDataGridViewTextBoxColumn,
-            this.itemInDeliveryNameDataGridViewTextBoxColumn,
-            this.itemInDeliveryCountDataGridViewTextBoxColumn,
-            this.itemInDeliveryDescriptionDataGridViewTextBoxColumn,
-            this.itemInDeliverySellPriceDataGridViewTextBoxColumn,
-            this.itemInDeliveryFromItemInStockIdDataGridViewTextBoxColumn,
-            this.itemInDeliveryFromDeliveryNoteDataGridViewTextBoxColumn,
-            this.itemInDeliveryOrderOrDeliveryDataGridViewTextBoxColumn});
-            this.DeliveryStorageDgv.DataSource = this.itemsInStockDeliveryBindingSource;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DeliveryStorageDgv.DefaultCellStyle = dataGridViewCellStyle17;
-            this.DeliveryStorageDgv.EnableHeadersVisualStyles = false;
-            this.DeliveryStorageDgv.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.DeliveryStorageDgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.DeliveryStorageDgv.Location = new System.Drawing.Point(829, 300);
-            this.DeliveryStorageDgv.Name = "DeliveryStorageDgv";
-            this.DeliveryStorageDgv.ReadOnly = true;
-            this.DeliveryStorageDgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DeliveryStorageDgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
-            this.DeliveryStorageDgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.DeliveryStorageDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DeliveryStorageDgv.Size = new System.Drawing.Size(559, 274);
-            this.DeliveryStorageDgv.TabIndex = 2;
-            // 
-            // CreateDeliveryNoteBtn
-            // 
-            this.CreateDeliveryNoteBtn.Location = new System.Drawing.Point(655, 34);
-            this.CreateDeliveryNoteBtn.Name = "CreateDeliveryNoteBtn";
-            this.CreateDeliveryNoteBtn.Size = new System.Drawing.Size(168, 48);
-            this.CreateDeliveryNoteBtn.TabIndex = 3;
-            this.CreateDeliveryNoteBtn.Text = "Vytvořit dodávku";
-            this.CreateDeliveryNoteBtn.UseSelectable = true;
-            this.CreateDeliveryNoteBtn.Click += new System.EventHandler(this.CreateDeliveryNoteBtn_Click);
-            // 
-            // CreateOrderNoteBtn
-            // 
-            this.CreateOrderNoteBtn.Location = new System.Drawing.Point(655, 110);
-            this.CreateOrderNoteBtn.Name = "CreateOrderNoteBtn";
-            this.CreateOrderNoteBtn.Size = new System.Drawing.Size(168, 48);
-            this.CreateOrderNoteBtn.TabIndex = 4;
-            this.CreateOrderNoteBtn.Text = "Vytvořit objednávku";
-            this.CreateOrderNoteBtn.UseSelectable = true;
-            this.CreateOrderNoteBtn.Click += new System.EventHandler(this.CreateOrderNoteBtn_Click);
-            // 
-            // AddItemToDeliveryBtn
-            // 
-            this.AddItemToDeliveryBtn.Location = new System.Drawing.Point(600, 238);
-            this.AddItemToDeliveryBtn.Name = "AddItemToDeliveryBtn";
-            this.AddItemToDeliveryBtn.Size = new System.Drawing.Size(138, 86);
-            this.AddItemToDeliveryBtn.TabIndex = 5;
-            this.AddItemToDeliveryBtn.Text = "Přidat položku do\r\ndodacího listu";
-            this.AddItemToDeliveryBtn.UseSelectable = true;
-            this.AddItemToDeliveryBtn.Click += new System.EventHandler(this.AddItemToDeliveryBtn_Click);
-            // 
-            // DeleteDeliveryNoteBtn
-            // 
-            this.DeleteDeliveryNoteBtn.Location = new System.Drawing.Point(1309, 34);
-            this.DeleteDeliveryNoteBtn.Name = "DeleteDeliveryNoteBtn";
-            this.DeleteDeliveryNoteBtn.Size = new System.Drawing.Size(124, 23);
-            this.DeleteDeliveryNoteBtn.TabIndex = 6;
-            this.DeleteDeliveryNoteBtn.Text = "Smazat dodací list";
-            this.DeleteDeliveryNoteBtn.UseSelectable = true;
-            this.DeleteDeliveryNoteBtn.Click += new System.EventHandler(this.DeleteDeliveryNoteBtn_Click);
-            // 
-            // DeleteItemFromDeliveryBtn
-            // 
-            this.DeleteItemFromDeliveryBtn.Location = new System.Drawing.Point(655, 516);
-            this.DeleteItemFromDeliveryBtn.Name = "DeleteItemFromDeliveryBtn";
-            this.DeleteItemFromDeliveryBtn.Size = new System.Drawing.Size(168, 48);
-            this.DeleteItemFromDeliveryBtn.TabIndex = 7;
-            this.DeleteItemFromDeliveryBtn.Text = "Smazat položku ";
-            this.DeleteItemFromDeliveryBtn.UseSelectable = true;
-            this.DeleteItemFromDeliveryBtn.Click += new System.EventHandler(this.DeleteItemFromDeliveryBtn_Click);
-            // 
-            // AddItemsInOrderToStorageBtn
-            // 
-            this.AddItemsInOrderToStorageBtn.Location = new System.Drawing.Point(1245, 597);
-            this.AddItemsInOrderToStorageBtn.Name = "AddItemsInOrderToStorageBtn";
-            this.AddItemsInOrderToStorageBtn.Size = new System.Drawing.Size(188, 23);
-            this.AddItemsInOrderToStorageBtn.TabIndex = 8;
-            this.AddItemsInOrderToStorageBtn.Text = "Naskladnit zboží z objednávky";
-            this.AddItemsInOrderToStorageBtn.UseSelectable = true;
-            this.AddItemsInOrderToStorageBtn.Click += new System.EventHandler(this.AddItemsInOrderToStorageBtn_Click);
-            // 
-            // itemsInStockDeliveryBindingSource
-            // 
-            this.itemsInStockDeliveryBindingSource.DataMember = "ItemsInStockDelivery";
-            this.itemsInStockDeliveryBindingSource.DataSource = this.zltMgx2tGNDataSet1;
-            // 
-            // zltMgx2tGNDataSet1
-            // 
-            this.zltMgx2tGNDataSet1.DataSetName = "zltMgx2tGNDataSet1";
-            this.zltMgx2tGNDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // deliveryNoteBindingSource
-            // 
-            this.deliveryNoteBindingSource.DataMember = "DeliveryNote";
-            this.deliveryNoteBindingSource.DataSource = this.zltMgx2tGNDataSet1;
             // 
             // itemIdDataGridViewTextBoxColumn
             // 
@@ -363,17 +177,65 @@
             this.storageBindingSource.DataMember = "Storage";
             this.storageBindingSource.DataSource = this.zltMgx2tGNDataSet1;
             // 
-            // storageTableAdapter
+            // zltMgx2tGNDataSet1
             // 
-            this.storageTableAdapter.ClearBeforeFill = true;
+            this.zltMgx2tGNDataSet1.DataSetName = "zltMgx2tGNDataSet1";
+            this.zltMgx2tGNDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // deliveryNoteTableAdapter
+            // DeliveryNoteDgv
             // 
-            this.deliveryNoteTableAdapter.ClearBeforeFill = true;
-            // 
-            // itemsInStockDeliveryTableAdapter
-            // 
-            this.itemsInStockDeliveryTableAdapter.ClearBeforeFill = true;
+            this.DeliveryNoteDgv.AllowUserToAddRows = false;
+            this.DeliveryNoteDgv.AllowUserToResizeRows = false;
+            this.DeliveryNoteDgv.AutoGenerateColumns = false;
+            this.DeliveryNoteDgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.DeliveryNoteDgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DeliveryNoteDgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.DeliveryNoteDgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DeliveryNoteDgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.DeliveryNoteDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DeliveryNoteDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.deliveryNoteIdDataGridViewTextBoxColumn,
+            this.deliveryNoteIndicationDataGridViewTextBoxColumn,
+            this.deliveryNoteCountDataGridViewTextBoxColumn,
+            this.deliveryNoteOrderOrDeliveryDataGridViewTextBoxColumn});
+            this.DeliveryNoteDgv.DataSource = this.deliveryNoteBindingSource;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DeliveryNoteDgv.DefaultCellStyle = dataGridViewCellStyle5;
+            this.DeliveryNoteDgv.EnableHeadersVisualStyles = false;
+            this.DeliveryNoteDgv.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.DeliveryNoteDgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.DeliveryNoteDgv.Location = new System.Drawing.Point(829, 63);
+            this.DeliveryNoteDgv.Name = "DeliveryNoteDgv";
+            this.DeliveryNoteDgv.ReadOnly = true;
+            this.DeliveryNoteDgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DeliveryNoteDgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.DeliveryNoteDgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.DeliveryNoteDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DeliveryNoteDgv.Size = new System.Drawing.Size(668, 277);
+            this.DeliveryNoteDgv.TabIndex = 1;
+            this.DeliveryNoteDgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DeliveryNoteDgv_CellClick);
+            this.DeliveryNoteDgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DeliveryNoteDgv_CellContentClick);
+            this.DeliveryNoteDgv.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DeliveryNoteDgv_CellContentDoubleClick);
             // 
             // deliveryNoteIdDataGridViewTextBoxColumn
             // 
@@ -402,6 +264,67 @@
             this.deliveryNoteOrderOrDeliveryDataGridViewTextBoxColumn.HeaderText = "Objednávka/výdejka";
             this.deliveryNoteOrderOrDeliveryDataGridViewTextBoxColumn.Name = "deliveryNoteOrderOrDeliveryDataGridViewTextBoxColumn";
             this.deliveryNoteOrderOrDeliveryDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // deliveryNoteBindingSource
+            // 
+            this.deliveryNoteBindingSource.DataMember = "DeliveryNote";
+            this.deliveryNoteBindingSource.DataSource = this.zltMgx2tGNDataSet1;
+            // 
+            // DeliveryStorageDgv
+            // 
+            this.DeliveryStorageDgv.AllowUserToAddRows = false;
+            this.DeliveryStorageDgv.AllowUserToResizeRows = false;
+            this.DeliveryStorageDgv.AutoGenerateColumns = false;
+            this.DeliveryStorageDgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.DeliveryStorageDgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DeliveryStorageDgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.DeliveryStorageDgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DeliveryStorageDgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.DeliveryStorageDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DeliveryStorageDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.itemInDeliveryIdDataGridViewTextBoxColumn,
+            this.itemInDeliveryNameDataGridViewTextBoxColumn,
+            this.itemInDeliveryCountDataGridViewTextBoxColumn,
+            this.itemInDeliveryDescriptionDataGridViewTextBoxColumn,
+            this.itemInDeliverySellPriceDataGridViewTextBoxColumn,
+            this.itemInDeliveryFromItemInStockIdDataGridViewTextBoxColumn,
+            this.itemInDeliveryFromDeliveryNoteDataGridViewTextBoxColumn,
+            this.itemInDeliveryOrderOrDeliveryDataGridViewTextBoxColumn});
+            this.DeliveryStorageDgv.DataSource = this.itemsInStockDeliveryBindingSource;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DeliveryStorageDgv.DefaultCellStyle = dataGridViewCellStyle8;
+            this.DeliveryStorageDgv.EnableHeadersVisualStyles = false;
+            this.DeliveryStorageDgv.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.DeliveryStorageDgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.DeliveryStorageDgv.Location = new System.Drawing.Point(829, 346);
+            this.DeliveryStorageDgv.Name = "DeliveryStorageDgv";
+            this.DeliveryStorageDgv.ReadOnly = true;
+            this.DeliveryStorageDgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DeliveryStorageDgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.DeliveryStorageDgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.DeliveryStorageDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DeliveryStorageDgv.Size = new System.Drawing.Size(668, 444);
+            this.DeliveryStorageDgv.TabIndex = 2;
             // 
             // itemInDeliveryIdDataGridViewTextBoxColumn
             // 
@@ -462,11 +385,88 @@
             this.itemInDeliveryOrderOrDeliveryDataGridViewTextBoxColumn.Name = "itemInDeliveryOrderOrDeliveryDataGridViewTextBoxColumn";
             this.itemInDeliveryOrderOrDeliveryDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // itemsInStockDeliveryBindingSource
+            // 
+            this.itemsInStockDeliveryBindingSource.DataMember = "ItemsInStockDelivery";
+            this.itemsInStockDeliveryBindingSource.DataSource = this.zltMgx2tGNDataSet1;
+            // 
+            // CreateDeliveryNoteBtn
+            // 
+            this.CreateDeliveryNoteBtn.Location = new System.Drawing.Point(655, 63);
+            this.CreateDeliveryNoteBtn.Name = "CreateDeliveryNoteBtn";
+            this.CreateDeliveryNoteBtn.Size = new System.Drawing.Size(168, 48);
+            this.CreateDeliveryNoteBtn.TabIndex = 3;
+            this.CreateDeliveryNoteBtn.Text = "Vytvořit dodávku";
+            this.CreateDeliveryNoteBtn.UseSelectable = true;
+            this.CreateDeliveryNoteBtn.Click += new System.EventHandler(this.CreateDeliveryNoteBtn_Click);
+            // 
+            // CreateOrderNoteBtn
+            // 
+            this.CreateOrderNoteBtn.Location = new System.Drawing.Point(655, 117);
+            this.CreateOrderNoteBtn.Name = "CreateOrderNoteBtn";
+            this.CreateOrderNoteBtn.Size = new System.Drawing.Size(168, 48);
+            this.CreateOrderNoteBtn.TabIndex = 4;
+            this.CreateOrderNoteBtn.Text = "Vytvořit objednávku";
+            this.CreateOrderNoteBtn.UseSelectable = true;
+            this.CreateOrderNoteBtn.Click += new System.EventHandler(this.CreateOrderNoteBtn_Click);
+            // 
+            // AddItemToDeliveryBtn
+            // 
+            this.AddItemToDeliveryBtn.Location = new System.Drawing.Point(519, 346);
+            this.AddItemToDeliveryBtn.Name = "AddItemToDeliveryBtn";
+            this.AddItemToDeliveryBtn.Size = new System.Drawing.Size(138, 86);
+            this.AddItemToDeliveryBtn.TabIndex = 5;
+            this.AddItemToDeliveryBtn.Text = "Přidat položku do\r\ndodacího listu";
+            this.AddItemToDeliveryBtn.UseSelectable = true;
+            this.AddItemToDeliveryBtn.Click += new System.EventHandler(this.AddItemToDeliveryBtn_Click);
+            // 
+            // DeleteDeliveryNoteBtn
+            // 
+            this.DeleteDeliveryNoteBtn.Location = new System.Drawing.Point(1309, 34);
+            this.DeleteDeliveryNoteBtn.Name = "DeleteDeliveryNoteBtn";
+            this.DeleteDeliveryNoteBtn.Size = new System.Drawing.Size(124, 23);
+            this.DeleteDeliveryNoteBtn.TabIndex = 6;
+            this.DeleteDeliveryNoteBtn.Text = "Smazat dodací list";
+            this.DeleteDeliveryNoteBtn.UseSelectable = true;
+            this.DeleteDeliveryNoteBtn.Click += new System.EventHandler(this.DeleteDeliveryNoteBtn_Click);
+            // 
+            // DeleteItemFromDeliveryBtn
+            // 
+            this.DeleteItemFromDeliveryBtn.Location = new System.Drawing.Point(655, 761);
+            this.DeleteItemFromDeliveryBtn.Name = "DeleteItemFromDeliveryBtn";
+            this.DeleteItemFromDeliveryBtn.Size = new System.Drawing.Size(168, 48);
+            this.DeleteItemFromDeliveryBtn.TabIndex = 7;
+            this.DeleteItemFromDeliveryBtn.Text = "Smazat položku ";
+            this.DeleteItemFromDeliveryBtn.UseSelectable = true;
+            this.DeleteItemFromDeliveryBtn.Click += new System.EventHandler(this.DeleteItemFromDeliveryBtn_Click);
+            // 
+            // AddItemsInOrderToStorageBtn
+            // 
+            this.AddItemsInOrderToStorageBtn.Location = new System.Drawing.Point(1309, 813);
+            this.AddItemsInOrderToStorageBtn.Name = "AddItemsInOrderToStorageBtn";
+            this.AddItemsInOrderToStorageBtn.Size = new System.Drawing.Size(188, 23);
+            this.AddItemsInOrderToStorageBtn.TabIndex = 8;
+            this.AddItemsInOrderToStorageBtn.Text = "Naskladnit zboží z objednávky";
+            this.AddItemsInOrderToStorageBtn.UseSelectable = true;
+            this.AddItemsInOrderToStorageBtn.Click += new System.EventHandler(this.AddItemsInOrderToStorageBtn_Click);
+            // 
+            // storageTableAdapter
+            // 
+            this.storageTableAdapter.ClearBeforeFill = true;
+            // 
+            // deliveryNoteTableAdapter
+            // 
+            this.deliveryNoteTableAdapter.ClearBeforeFill = true;
+            // 
+            // itemsInStockDeliveryTableAdapter
+            // 
+            this.itemsInStockDeliveryTableAdapter.ClearBeforeFill = true;
+            // 
             // DeliveryNoteFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1470, 672);
+            this.ClientSize = new System.Drawing.Size(1511, 868);
             this.Controls.Add(this.AddItemsInOrderToStorageBtn);
             this.Controls.Add(this.DeleteItemFromDeliveryBtn);
             this.Controls.Add(this.DeleteDeliveryNoteBtn);
@@ -480,12 +480,12 @@
             this.Text = "Dodací listy";
             this.Load += new System.EventHandler(this.DeliveryNoteFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.StorageInDeliveryDgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zltMgx2tGNDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeliveryNoteDgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deliveryNoteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeliveryStorageDgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsInStockDeliveryBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zltMgx2tGNDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deliveryNoteBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

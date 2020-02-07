@@ -15,7 +15,6 @@ namespace StorageProgram
 {
     public partial class StorageFrm : MetroFramework.Forms.MetroForm
     {
-        Database.DatabaseStorage databaseStorage = new Database.DatabaseStorage();
         UnitOfWork _unitOfWork = new UnitOfWork(new Database.DatabaseStorage());
 
         public StorageFrm()

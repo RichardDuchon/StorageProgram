@@ -18,6 +18,7 @@ namespace StorageProgram
 
         public LoginMenuFrm()
         {
+
             InitializeComponent();
             LoginNameTxb.Text = 1.ToString();
             LoginPasswordTxb.Text = 1.ToString();
