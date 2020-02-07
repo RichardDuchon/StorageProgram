@@ -34,6 +34,7 @@
             this.CreateAccountBtn = new MetroFramework.Controls.MetroButton();
             this.LoginNameTxb = new MetroFramework.Controls.MetroTextBox();
             this.LoginPasswordTxb = new MetroFramework.Controls.MetroTextBox();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // LoginNameLbl
@@ -85,7 +86,7 @@
             // 
             // 
             this.LoginNameTxb.CustomButton.Image = null;
-            this.LoginNameTxb.CustomButton.Location = new System.Drawing.Point(148, 1);
+            this.LoginNameTxb.CustomButton.Location = new System.Drawing.Point(183, 1);
             this.LoginNameTxb.CustomButton.Name = "";
             this.LoginNameTxb.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.LoginNameTxb.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -116,7 +117,7 @@
             // 
             // 
             this.LoginPasswordTxb.CustomButton.Image = null;
-            this.LoginPasswordTxb.CustomButton.Location = new System.Drawing.Point(148, 1);
+            this.LoginPasswordTxb.CustomButton.Location = new System.Drawing.Point(183, 1);
             this.LoginPasswordTxb.CustomButton.Name = "";
             this.LoginPasswordTxb.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.LoginPasswordTxb.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -140,11 +141,21 @@
             this.LoginPasswordTxb.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.LoginPasswordTxb.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(680, 201);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(75, 23);
+            this.metroButton1.TabIndex = 7;
+            this.metroButton1.Text = "metroButton1";
+            this.metroButton1.UseSelectable = true;
+            // 
             // LoginMenuFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.LoginPasswordTxb);
             this.Controls.Add(this.LoginNameTxb);
             this.Controls.Add(this.CreateAccountBtn);
@@ -166,6 +177,7 @@
         private MetroFramework.Controls.MetroButton CreateAccountBtn;
         private MetroFramework.Controls.MetroTextBox LoginNameTxb;
         private MetroFramework.Controls.MetroTextBox LoginPasswordTxb;
+        private MetroFramework.Controls.MetroButton metroButton1;
     }
 }
 
