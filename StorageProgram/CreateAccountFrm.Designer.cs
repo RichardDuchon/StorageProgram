@@ -85,7 +85,7 @@
             // 
             // 
             this.AccountNameTxb.CustomButton.Image = null;
-            this.AccountNameTxb.CustomButton.Location = new System.Drawing.Point(149, 1);
+            this.AccountNameTxb.CustomButton.Location = new System.Drawing.Point(159, 1);
             this.AccountNameTxb.CustomButton.Name = "";
             this.AccountNameTxb.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.AccountNameTxb.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -103,7 +103,7 @@
             this.AccountNameTxb.SelectionLength = 0;
             this.AccountNameTxb.SelectionStart = 0;
             this.AccountNameTxb.ShortcutsEnabled = true;
-            this.AccountNameTxb.Size = new System.Drawing.Size(171, 23);
+            this.AccountNameTxb.Size = new System.Drawing.Size(181, 23);
             this.AccountNameTxb.TabIndex = 4;
             this.AccountNameTxb.UseSelectable = true;
             this.AccountNameTxb.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -116,7 +116,7 @@
             // 
             // 
             this.AccountPasswordTxb.CustomButton.Image = null;
-            this.AccountPasswordTxb.CustomButton.Location = new System.Drawing.Point(159, 1);
+            this.AccountPasswordTxb.CustomButton.Location = new System.Drawing.Point(155, 1);
             this.AccountPasswordTxb.CustomButton.Name = "";
             this.AccountPasswordTxb.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.AccountPasswordTxb.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -128,13 +128,13 @@
             this.AccountPasswordTxb.Location = new System.Drawing.Point(363, 183);
             this.AccountPasswordTxb.MaxLength = 32767;
             this.AccountPasswordTxb.Name = "AccountPasswordTxb";
-            this.AccountPasswordTxb.PasswordChar = '\0';
+            this.AccountPasswordTxb.PasswordChar = '*';
             this.AccountPasswordTxb.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.AccountPasswordTxb.SelectedText = "";
             this.AccountPasswordTxb.SelectionLength = 0;
             this.AccountPasswordTxb.SelectionStart = 0;
             this.AccountPasswordTxb.ShortcutsEnabled = true;
-            this.AccountPasswordTxb.Size = new System.Drawing.Size(181, 23);
+            this.AccountPasswordTxb.Size = new System.Drawing.Size(177, 23);
             this.AccountPasswordTxb.TabIndex = 5;
             this.AccountPasswordTxb.UseSelectable = true;
             this.AccountPasswordTxb.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -159,7 +159,7 @@
             this.AccountPasswordAgainTxb.Location = new System.Drawing.Point(363, 242);
             this.AccountPasswordAgainTxb.MaxLength = 32767;
             this.AccountPasswordAgainTxb.Name = "AccountPasswordAgainTxb";
-            this.AccountPasswordAgainTxb.PasswordChar = '\0';
+            this.AccountPasswordAgainTxb.PasswordChar = '*';
             this.AccountPasswordAgainTxb.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.AccountPasswordAgainTxb.SelectedText = "";
             this.AccountPasswordAgainTxb.SelectionLength = 0;

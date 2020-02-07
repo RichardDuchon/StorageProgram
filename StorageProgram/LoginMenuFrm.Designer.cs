@@ -128,7 +128,7 @@
             this.LoginPasswordTxb.Location = new System.Drawing.Point(328, 205);
             this.LoginPasswordTxb.MaxLength = 32767;
             this.LoginPasswordTxb.Name = "LoginPasswordTxb";
-            this.LoginPasswordTxb.PasswordChar = '\0';
+            this.LoginPasswordTxb.PasswordChar = '*';
             this.LoginPasswordTxb.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.LoginPasswordTxb.SelectedText = "";
             this.LoginPasswordTxb.SelectionLength = 0;
