@@ -74,12 +74,18 @@ namespace StorageProgram
             _unitOfWork.Complete();
             ShowDataInDeliveryStorageNote();
             ShowDataInDeliveryNote();
+            ShowDataInStorage();
         }
 
         private void ShowDataInDeliveryNote()
         {
             deliveryNoteBindingSource.DataSource = _unitOfWork.DeliveryNote.GetAll();
 
+        }
+
+        private void ShowDataInStorage()
+        {
+            storageBindingSource.DataSource = _unitOfWork.Storage.GetAll();
         }
 
         private void ShowDataInDeliveryStorageNote()
@@ -144,7 +150,7 @@ namespace StorageProgram
         {
             ShowDataInStorage();
         }
-        private void ShowDataInStorage()
+        private void ShowDataFromStorage()
         {
             var getIdOfItemFromStorage = Convert.ToInt32(StorageInDeliveryDgv.CurrentRow.Cells["itemIdDataGridViewTextBoxColumn"].Value);
             idOfItemFromStorage = getIdOfItemFromStorage;
@@ -172,6 +178,9 @@ namespace StorageProgram
         {
             _unitOfWork.ItemsInStockDelivery.AddItemsToStorageFromOrder(Convert.ToInt32(DeliveryNoteDgv.CurrentRow.Cells["deliveryNoteIdDataGridViewTextBoxColumn"].Value));
             _unitOfWork.Complete();
+            ShowDataInStorage();
+
+
         }
     }
 }

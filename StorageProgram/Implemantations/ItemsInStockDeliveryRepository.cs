@@ -76,7 +76,9 @@ namespace StorageProgram.Implemantations
             {
                 if (itemToDelete.ItemInDeliveryOrderOrDelivery == "Dodávka.")
                 {
-                    var storageToCountUpAfterDelete = database.Storages.First(i => i.ItemId == itemToDelete.ItemInDeliveryFromItemInStockId);
+                    var storageToCountUpAfterDelete = database.Storages.FirstOrDefault(i => i.ItemId == itemToDelete.ItemInDeliveryFromItemInStockId);
+
+                    if(storageToCountUpAfterDelete != null)
                     storageToCountUpAfterDelete.ItemCount += itemToDelete.ItemInDeliveryCount;
                 }
 
