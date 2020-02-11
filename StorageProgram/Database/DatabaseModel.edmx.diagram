@@ -10,6 +10,7 @@
         <EntityTypeShape EntityType="Storage.Invoice" Width="1.5" PointX="3.75" PointY="3.75" />
         <EntityTypeShape EntityType="Storage.ItemsInStockDelivery" Width="1.5" PointX="1" PointY="4" />
         <EntityTypeShape EntityType="Storage.User" Width="1.5" PointX="7" PointY="0.875" />
+        <EntityTypeShape EntityType="Storage.Company" Width="1.5" PointX="6.375" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

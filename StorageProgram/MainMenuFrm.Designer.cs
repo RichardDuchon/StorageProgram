@@ -32,12 +32,13 @@
             this.InvoiceBtn = new MetroFramework.Controls.MetroButton();
             this.DeliveryNoteBtn = new MetroFramework.Controls.MetroButton();
             this.LoginMenuBtn = new MetroFramework.Controls.MetroButton();
+            this.CompanyBtn = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // StorageBtn
             // 
             this.StorageBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.StorageBtn.Location = new System.Drawing.Point(311, 121);
+            this.StorageBtn.Location = new System.Drawing.Point(311, 71);
             this.StorageBtn.Name = "StorageBtn";
             this.StorageBtn.Size = new System.Drawing.Size(168, 48);
             this.StorageBtn.TabIndex = 0;
@@ -48,7 +49,7 @@
             // InvoiceBtn
             // 
             this.InvoiceBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.InvoiceBtn.Location = new System.Drawing.Point(311, 280);
+            this.InvoiceBtn.Location = new System.Drawing.Point(311, 230);
             this.InvoiceBtn.Name = "InvoiceBtn";
             this.InvoiceBtn.Size = new System.Drawing.Size(168, 48);
             this.InvoiceBtn.TabIndex = 1;
@@ -59,7 +60,7 @@
             // DeliveryNoteBtn
             // 
             this.DeliveryNoteBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.DeliveryNoteBtn.Location = new System.Drawing.Point(311, 201);
+            this.DeliveryNoteBtn.Location = new System.Drawing.Point(311, 151);
             this.DeliveryNoteBtn.Name = "DeliveryNoteBtn";
             this.DeliveryNoteBtn.Size = new System.Drawing.Size(168, 48);
             this.DeliveryNoteBtn.TabIndex = 2;
@@ -78,11 +79,21 @@
             this.LoginMenuBtn.UseSelectable = true;
             this.LoginMenuBtn.Click += new System.EventHandler(this.LoginMenuBtn_Click);
             // 
+            // CompanyBtn
+            // 
+            this.CompanyBtn.Location = new System.Drawing.Point(311, 314);
+            this.CompanyBtn.Name = "CompanyBtn";
+            this.CompanyBtn.Size = new System.Drawing.Size(168, 48);
+            this.CompanyBtn.TabIndex = 4;
+            this.CompanyBtn.Text = "Firmy";
+            this.CompanyBtn.UseSelectable = true;
+            // 
             // MainMenuFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.CompanyBtn);
             this.Controls.Add(this.LoginMenuBtn);
             this.Controls.Add(this.DeliveryNoteBtn);
             this.Controls.Add(this.InvoiceBtn);
@@ -99,5 +110,6 @@
         private MetroFramework.Controls.MetroButton InvoiceBtn;
         private MetroFramework.Controls.MetroButton DeliveryNoteBtn;
         private MetroFramework.Controls.MetroButton LoginMenuBtn;
+        private MetroFramework.Controls.MetroButton CompanyBtn;
     }
 }

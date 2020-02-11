@@ -427,6 +427,8 @@ namespace StorageProgram {
             
             private global::System.Data.DataColumn columnDeliveryNoteCount;
             
+            private global::System.Data.DataColumn columnDeliveryNoteNameOfCompany;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public DeliveryNoteDataTable() {
@@ -494,6 +496,14 @@ namespace StorageProgram {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DeliveryNoteNameOfCompanyColumn {
+                get {
+                    return this.columnDeliveryNoteNameOfCompany;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -529,13 +539,14 @@ namespace StorageProgram {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DeliveryNoteRow AddDeliveryNoteRow(string DeliveryNoteIndication, string DeliveryNoteOrderOrDelivery, int DeliveryNoteCount) {
+            public DeliveryNoteRow AddDeliveryNoteRow(string DeliveryNoteIndication, string DeliveryNoteOrderOrDelivery, int DeliveryNoteCount, string DeliveryNoteNameOfCompany) {
                 DeliveryNoteRow rowDeliveryNoteRow = ((DeliveryNoteRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         DeliveryNoteIndication,
                         DeliveryNoteOrderOrDelivery,
-                        DeliveryNoteCount};
+                        DeliveryNoteCount,
+                        DeliveryNoteNameOfCompany};
                 rowDeliveryNoteRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDeliveryNoteRow);
                 return rowDeliveryNoteRow;
@@ -569,6 +580,7 @@ namespace StorageProgram {
                 this.columnDeliveryNoteIndication = base.Columns["DeliveryNoteIndication"];
                 this.columnDeliveryNoteOrderOrDelivery = base.Columns["DeliveryNoteOrderOrDelivery"];
                 this.columnDeliveryNoteCount = base.Columns["DeliveryNoteCount"];
+                this.columnDeliveryNoteNameOfCompany = base.Columns["DeliveryNoteNameOfCompany"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -582,6 +594,8 @@ namespace StorageProgram {
                 base.Columns.Add(this.columnDeliveryNoteOrderOrDelivery);
                 this.columnDeliveryNoteCount = new global::System.Data.DataColumn("DeliveryNoteCount", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDeliveryNoteCount);
+                this.columnDeliveryNoteNameOfCompany = new global::System.Data.DataColumn("DeliveryNoteNameOfCompany", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDeliveryNoteNameOfCompany);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnDeliveryNoteId}, true));
                 this.columnDeliveryNoteId.AutoIncrement = true;
@@ -594,6 +608,8 @@ namespace StorageProgram {
                 this.columnDeliveryNoteOrderOrDelivery.AllowDBNull = false;
                 this.columnDeliveryNoteOrderOrDelivery.MaxLength = 65535;
                 this.columnDeliveryNoteCount.AllowDBNull = false;
+                this.columnDeliveryNoteNameOfCompany.AllowDBNull = false;
+                this.columnDeliveryNoteNameOfCompany.MaxLength = 65535;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2099,6 +2115,17 @@ namespace StorageProgram {
                     this[this.tableDeliveryNote.DeliveryNoteCountColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string DeliveryNoteNameOfCompany {
+                get {
+                    return ((string)(this[this.tableDeliveryNote.DeliveryNoteNameOfCompanyColumn]));
+                }
+                set {
+                    this[this.tableDeliveryNote.DeliveryNoteNameOfCompanyColumn] = value;
+                }
+            }
         }
         
         /// <summary>
@@ -3009,6 +3036,7 @@ namespace StorageProgram.zltMgx2tGNDataSet1TableAdapters {
             tableMapping.ColumnMappings.Add("DeliveryNoteIndication", "DeliveryNoteIndication");
             tableMapping.ColumnMappings.Add("DeliveryNoteOrderOrDelivery", "DeliveryNoteOrderOrDelivery");
             tableMapping.ColumnMappings.Add("DeliveryNoteCount", "DeliveryNoteCount");
+            tableMapping.ColumnMappings.Add("DeliveryNoteNameOfCompany", "DeliveryNoteNameOfCompany");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -3034,7 +3062,8 @@ namespace StorageProgram.zltMgx2tGNDataSet1TableAdapters {
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO `DeliveryNote` (`DeliveryNoteIndication`, `DeliveryNoteCount`, `Deliv" +
-                "eryNoteOrderOrDelivery`) VALUES (@p1, @p2, @p3)";
+                "eryNoteNameOfCompany`, `DeliveryNoteOrderOrDelivery`) VALUES (@p1, @p2, @p3, @p4" +
+                ")";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -3055,14 +3084,21 @@ namespace StorageProgram.zltMgx2tGNDataSet1TableAdapters {
             param.ParameterName = "@p3";
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Text;
             param.IsNullable = true;
+            param.SourceColumn = "DeliveryNoteNameOfCompany";
+            param.SourceVersion = global::System.Data.DataRowVersion.Current;
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p4";
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Text;
+            param.IsNullable = true;
             param.SourceColumn = "DeliveryNoteOrderOrDelivery";
             param.SourceVersion = global::System.Data.DataRowVersion.Current;
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE `DeliveryNote` SET `DeliveryNoteIndication` = @p1, `DeliveryNoteCount` = @" +
-                "p2, `DeliveryNoteOrderOrDelivery` = @p3 WHERE ((`DeliveryNoteId` = @p4) AND (`De" +
-                "liveryNoteCount` = @p5))";
+                "p2, `DeliveryNoteNameOfCompany` = @p3, `DeliveryNoteOrderOrDelivery` = @p4 WHERE" +
+                " ((`DeliveryNoteId` = @p5) AND (`DeliveryNoteCount` = @p6))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -3083,11 +3119,18 @@ namespace StorageProgram.zltMgx2tGNDataSet1TableAdapters {
             param.ParameterName = "@p3";
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Text;
             param.IsNullable = true;
-            param.SourceColumn = "DeliveryNoteOrderOrDelivery";
+            param.SourceColumn = "DeliveryNoteNameOfCompany";
             param.SourceVersion = global::System.Data.DataRowVersion.Current;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p4";
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Text;
+            param.IsNullable = true;
+            param.SourceColumn = "DeliveryNoteOrderOrDelivery";
+            param.SourceVersion = global::System.Data.DataRowVersion.Current;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p5";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
@@ -3095,7 +3138,7 @@ namespace StorageProgram.zltMgx2tGNDataSet1TableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p5";
+            param.ParameterName = "@p6";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
@@ -3118,7 +3161,7 @@ namespace StorageProgram.zltMgx2tGNDataSet1TableAdapters {
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT `DeliveryNoteId`, `DeliveryNoteIndication`, `DeliveryNoteCount`, `Delivery" +
-                "NoteOrderOrDelivery` FROM `DeliveryNote`";
+                "NoteNameOfCompany`, `DeliveryNoteOrderOrDelivery` FROM `DeliveryNote`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3202,7 +3245,7 @@ namespace StorageProgram.zltMgx2tGNDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string p1, int p2, string p3) {
+        public virtual int Insert(string p1, int p2, string p3, string p4) {
             if ((p1 == null)) {
                 throw new global::System.ArgumentNullException("p1");
             }
@@ -3215,6 +3258,12 @@ namespace StorageProgram.zltMgx2tGNDataSet1TableAdapters {
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(p3));
+            }
+            if ((p4 == null)) {
+                throw new global::System.ArgumentNullException("p4");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(p4));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3236,7 +3285,7 @@ namespace StorageProgram.zltMgx2tGNDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string p1, int p2, string p3, int p4, int p5) {
+        public virtual int Update(string p1, int p2, string p3, string p4, int p5, int p6) {
             if ((p1 == null)) {
                 throw new global::System.ArgumentNullException("p1");
             }
@@ -3250,8 +3299,14 @@ namespace StorageProgram.zltMgx2tGNDataSet1TableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(p3));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(p4));
+            if ((p4 == null)) {
+                throw new global::System.ArgumentNullException("p4");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(p4));
+            }
             this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(p5));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(p6));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

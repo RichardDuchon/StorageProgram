@@ -126,6 +126,9 @@
     <Compile Include="CreateNewItemFrm.Designer.cs">
       <DependentUpon>CreateNewItemFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Database\Company.cs">
+      <DependentUpon>DatabaseModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Database\DatabaseModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

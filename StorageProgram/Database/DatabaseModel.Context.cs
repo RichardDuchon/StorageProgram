@@ -30,5 +30,6 @@ namespace StorageProgram.Database
         public virtual DbSet<Invoice> Invoices { get; set; }
         public virtual DbSet<ItemsInStockDelivery> ItemsInStockDeliveries { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Company> Companies { get; set; }
     }
 }

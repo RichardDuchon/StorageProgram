@@ -138,17 +138,16 @@ namespace StorageProgram
 
         private void StorageInDeliveryDgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            ShowDataInStorage();
+            ShowDataFromStorage();
         }
 
         private void StorageInDeliveryDgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            ShowDataInStorage();
+            ShowDataFromStorage();
         }
-
         private void StorageInDeliveryDgv_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            ShowDataInStorage();
+            ShowDataFromStorage();
         }
         private void ShowDataFromStorage()
         {

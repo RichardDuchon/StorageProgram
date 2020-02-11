@@ -12,12 +12,11 @@ namespace StorageProgram.Database
     using System;
     using System.Collections.Generic;
     
-    public partial class DeliveryNote
+    public partial class Company
     {
-        public int DeliveryNoteId { get; set; }
-        public string DeliveryNoteIndication { get; set; }
-        public string DeliveryNoteOrderOrDelivery { get; set; }
-        public int DeliveryNoteCount { get; set; }
-        public string DeliveryNoteNameOfCompany { get; set; }
+        public int CompanyId { get; set; }
+        public string CompanyName { get; set; }
+        public int CompanyIdentificationNumber { get; set; }
+        public string CompanyResidence { get; set; }
     }
 }

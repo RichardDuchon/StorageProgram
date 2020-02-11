@@ -5,6 +5,15 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="Storage.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="8.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="CompanyId" />
+          </Key>
+          <Property Name="CompanyId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CompanyName" Type="text" Nullable="false" />
+          <Property Name="CompanyIdentificationNumber" Type="int" Nullable="false" />
+          <Property Name="CompanyResidence" Type="text" Nullable="false" />
+        </EntityType>
         <EntityType Name="DeliveryNote">
           <Key>
             <PropertyRef Name="DeliveryNoteId" />
@@ -13,6 +22,7 @@
           <Property Name="DeliveryNoteIndication" Type="text" Nullable="false" />
           <Property Name="DeliveryNoteOrderOrDelivery" Type="text" Nullable="false" />
           <Property Name="DeliveryNoteCount" Type="int" Nullable="false" />
+          <Property Name="DeliveryNoteNameOfCompany" Type="text" Nullable="false" />
         </EntityType>
         <EntityType Name="Invoice">
           <Key>
@@ -58,6 +68,7 @@
           <Property Name="UsersPassword" Type="text" Nullable="false" />
         </EntityType>
         <EntityContainer Name="StorageStoreContainer">
+          <EntitySet Name="Company" EntityType="Self.Company" Schema="zltMgx2tGN" store:Type="Tables" />
           <EntitySet Name="DeliveryNote" EntityType="Self.DeliveryNote" Schema="zltMgx2tGN" store:Type="Tables" />
           <EntitySet Name="Invoice" EntityType="Self.Invoice" Schema="zltMgx2tGN" store:Type="Tables" />
           <EntitySet Name="ItemsInStockDelivery" EntityType="Self.ItemsInStockDelivery" Schema="zltMgx2tGN" store:Type="Tables" />
@@ -84,6 +95,7 @@
           <EntitySet Name="Invoices" EntityType="Storage.Invoice" />
           <EntitySet Name="ItemsInStockDeliveries" EntityType="Storage.ItemsInStockDelivery" />
           <EntitySet Name="Users" EntityType="Storage.User" />
+          <EntitySet Name="Companies" EntityType="Storage.Company" />
         </EntityContainer>
         <EntityType Name="DeliveryNote">
           <Key>
@@ -93,6 +105,7 @@
           <Property Name="DeliveryNoteIndication" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
           <Property Name="DeliveryNoteOrderOrDelivery" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
           <Property Name="DeliveryNoteCount" Type="Int32" Nullable="false" />
+          <Property Name="DeliveryNoteNameOfCompany" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Invoice">
           <Key>
@@ -127,6 +140,15 @@
           <Property Name="UsersUsername" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
           <Property Name="UsersPassword" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="CompanyId" />
+          </Key>
+          <Property Name="CompanyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="CompanyIdentificationNumber" Type="Int32" Nullable="false" />
+          <Property Name="CompanyResidence" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -147,6 +169,7 @@
           <EntitySetMapping Name="DeliveryNotes">
             <EntityTypeMapping TypeName="Storage.DeliveryNote">
               <MappingFragment StoreEntitySet="DeliveryNote">
+                <ScalarProperty Name="DeliveryNoteNameOfCompany" ColumnName="DeliveryNoteNameOfCompany" />
                 <ScalarProperty Name="DeliveryNoteCount" ColumnName="DeliveryNoteCount" />
                 <ScalarProperty Name="DeliveryNoteOrderOrDelivery" ColumnName="DeliveryNoteOrderOrDelivery" />
                 <ScalarProperty Name="DeliveryNoteIndication" ColumnName="DeliveryNoteIndication" />
@@ -187,6 +210,16 @@
                 <ScalarProperty Name="UsersPassword" ColumnName="UsersPassword" />
                 <ScalarProperty Name="UsersUsername" ColumnName="UsersUsername" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Companies">
+            <EntityTypeMapping TypeName="Storage.Company">
+              <MappingFragment StoreEntitySet="Company">
+                <ScalarProperty Name="CompanyResidence" ColumnName="CompanyResidence" />
+                <ScalarProperty Name="CompanyIdentificationNumber" ColumnName="CompanyIdentificationNumber" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
