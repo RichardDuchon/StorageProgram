@@ -108,6 +108,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompanyFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompanyFrm.Designer.cs">
+      <DependentUpon>CompanyFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateAccountFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,11 +159,13 @@
     <Compile Include="DeliveryNoteFrm.Designer.cs">
       <DependentUpon>DeliveryNoteFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Implemantations\CompanyRepository.cs" />
     <Compile Include="Implemantations\DeliveryNoteRepository.cs" />
     <Compile Include="Implemantations\InvoiceRepository.cs" />
     <Compile Include="Implemantations\ItemsInStockDeliveryRepository.cs" />
     <Compile Include="Implemantations\UnitOfWork.cs" />
     <Compile Include="Implemantations\UsersRepository.cs" />
+    <Compile Include="Interfaces\ICompanyRepository.cs" />
     <Compile Include="Interfaces\IDeliveryNoteRepository.cs" />
     <Compile Include="Interfaces\IInvoiceRepository.cs" />
     <Compile Include="Interfaces\IItemsInStockDeliveryRepository.cs" />
@@ -213,6 +221,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>zltMgx2tGNDataSet1.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CompanyFrm.resx">
+      <DependentUpon>CompanyFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateAccountFrm.resx">
       <DependentUpon>CreateAccountFrm.cs</DependentUpon>
     </EmbeddedResource>

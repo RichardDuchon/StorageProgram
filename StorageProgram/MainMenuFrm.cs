@@ -40,5 +40,11 @@ namespace StorageProgram
             InvoiceFrm invoiceFrm = new InvoiceFrm();
             invoiceFrm.Show();
         }
+
+        private void CompanyBtn_Click(object sender, EventArgs e)
+        {
+            CompanyFrm companyFrm = new CompanyFrm();
+            companyFrm.Show();
+        }
     }
 }

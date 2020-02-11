@@ -87,6 +87,7 @@
             this.CompanyBtn.TabIndex = 4;
             this.CompanyBtn.Text = "Firmy";
             this.CompanyBtn.UseSelectable = true;
+            this.CompanyBtn.Click += new System.EventHandler(this.CompanyBtn_Click);
             // 
             // MainMenuFrm
             // 
