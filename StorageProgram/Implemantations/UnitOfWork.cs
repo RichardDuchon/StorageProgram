@@ -22,6 +22,7 @@ namespace StorageProgram.Implemantations
             Invoice = new InvoiceRepository(_databaseStorage);
             ItemsInStockDelivery = new ItemsInStockDeliveryRepository(_databaseStorage);
             DeliveryNote = new DeliveryNoteRepository(_databaseStorage);
+            Company = new CompanyRepository(_databaseStorage);
         }
 
         public IInvoiceRepository Invoice { get; private set; }
@@ -29,6 +30,7 @@ namespace StorageProgram.Implemantations
         public IUsersRepository Users { get; private set; }
         public IItemsInStockDeliveryRepository ItemsInStockDelivery { get; private set; }
         public IDeliveryNoteRepository DeliveryNote { get; private set; }
+        public ICompanyRepository Company { get; private set; }
 
         public int Complete()
         {

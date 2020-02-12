@@ -131,7 +131,6 @@ namespace StorageProgram
                         }
                     }
                     _unitOfWork.Complete();
-                    RefreshDeliveryNoteDgv();
                 }
             }
         }

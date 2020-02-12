@@ -13,6 +13,7 @@ namespace StorageProgram.Interfaces
         IInvoiceRepository Invoice { get; }
         IItemsInStockDeliveryRepository ItemsInStockDelivery { get; }
         IDeliveryNoteRepository DeliveryNote { get; }
+        ICompanyRepository Company { get; }
         int Complete();
     }
 }

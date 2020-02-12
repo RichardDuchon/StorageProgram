@@ -120,6 +120,12 @@
     <Compile Include="CreateAccountFrm.Designer.cs">
       <DependentUpon>CreateAccountFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreateNewCompanyFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateNewCompanyFrm.Designer.cs">
+      <DependentUpon>CreateNewCompanyFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateNewInvoiceFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CreateAccountFrm.resx">
       <DependentUpon>CreateAccountFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateNewCompanyFrm.resx">
+      <DependentUpon>CreateNewCompanyFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateNewInvoiceFrm.resx">
       <DependentUpon>CreateNewInvoiceFrm.cs</DependentUpon>

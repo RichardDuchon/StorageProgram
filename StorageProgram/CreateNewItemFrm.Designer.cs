@@ -78,7 +78,7 @@
             // 
             this.CreateNewItemBtn.Location = new System.Drawing.Point(307, 349);
             this.CreateNewItemBtn.Name = "CreateNewItemBtn";
-            this.CreateNewItemBtn.Size = new System.Drawing.Size(158, 23);
+            this.CreateNewItemBtn.Size = new System.Drawing.Size(168, 48);
             this.CreateNewItemBtn.TabIndex = 2;
             this.CreateNewItemBtn.Text = "Vytvořit položku";
             this.CreateNewItemBtn.UseSelectable = true;

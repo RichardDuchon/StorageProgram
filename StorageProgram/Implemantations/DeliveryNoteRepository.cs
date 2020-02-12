@@ -28,6 +28,7 @@ namespace StorageProgram.Implemantations
 
             deliveryNote.DeliveryNoteOrderOrDelivery = deliveryOrOrder;
             deliveryNote.DeliveryNoteIndication = Interaction.InputBox("Označení listu.", deliveryOrOrder, "");
+            deliveryNote.DeliveryNoteNameOfCompany = "Test";
 
             database.DeliveryNotes.Add(deliveryNote);
         }
