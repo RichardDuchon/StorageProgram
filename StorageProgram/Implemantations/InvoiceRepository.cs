@@ -11,13 +11,13 @@ namespace StorageProgram.Implemantations
 {
     class InvoiceRepository : Repository<Invoice>, IInvoiceRepository
     {
-        public InvoiceRepository(DatabaseStorage databaseStorage) : base(databaseStorage)
+        public InvoiceRepository(DatabaseForStorage databaseForStorage) : base(databaseForStorage)
         {
         }
 
-        public DatabaseStorage database
+        public DatabaseForStorage database
         {
-            get { return _dbContext as DatabaseStorage; }
+            get { return _dbContext as DatabaseForStorage; }
         }
     }
 }

@@ -14,7 +14,7 @@ namespace StorageProgram
 {
     public partial class CompanyFrm : MetroFramework.Forms.MetroForm
     {
-        UnitOfWork _unitOfWork = new UnitOfWork(new Database.DatabaseStorage());
+        UnitOfWork _unitOfWork = new UnitOfWork(new Database.DatabaseForStorage());
 
         public CompanyFrm()
         {
@@ -23,14 +23,12 @@ namespace StorageProgram
 
         private void CompanyFrm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'zltMgx2tGNDataSet1.Company' table. You can move, or remove it, as needed.
-            this.companyTableAdapter.Fill(this.zltMgx2tGNDataSet1.Company);
-
+            this.companyTableAdapter1.Fill(this.storageData.Company);
         }
 
         public void LoadCompanyToDataGridView()
         {
-            companyBindingSource.DataSource = _unitOfWork.Company.GetAll();
+            companyBindingSource1.DataSource = _unitOfWork.Company.GetAll();
         }
 
         private void CreateNewCompanyBtn_Click(object sender, EventArgs e)

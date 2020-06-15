@@ -37,11 +37,22 @@ namespace StorageProgram.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("user id=zltMgx2tGN;password=Mx95ey18Zf;server=remotemysql.com;database=zltMgx2tGN" +
+        [global::System.Configuration.DefaultSettingValueAttribute("user id=zltMgx2tGN;password=A61oKelZu2;server=remotemysql.com;database=zltMgx2tGN" +
             ";persistsecurityinfo=True")]
         public string zltMgx2tGNConnectionString1 {
             get {
                 return ((string)(this["zltMgx2tGNConnectionString1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=sql7.freesqldatabase.com;user id=sql7347467;password=LLZieSmiNX;persistsec" +
+            "urityinfo=True;database=sql7347467")]
+        public string StorageDatabaseString {
+            get {
+                return ((string)(this["StorageDatabaseString"]));
             }
         }
     }

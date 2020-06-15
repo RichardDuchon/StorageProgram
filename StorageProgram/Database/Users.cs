@@ -12,7 +12,7 @@ namespace StorageProgram.Database
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class Users
     {
         public int Id { get; set; }
         public string UsersUsername { get; set; }

@@ -13,10 +13,18 @@
     <Setting Name="zltMgx2tGNConnectionString1" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;user id=zltMgx2tGN;password=Mx95ey18Zf;server=remotemysql.com;database=zltMgx2tGN;persistsecurityinfo=True&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;user id=zltMgx2tGN;password=A61oKelZu2;server=remotemysql.com;database=zltMgx2tGN;persistsecurityinfo=True&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">user id=zltMgx2tGN;password=Mx95ey18Zf;server=remotemysql.com;database=zltMgx2tGN;persistsecurityinfo=True</Value>
+      <Value Profile="(Default)">user id=zltMgx2tGN;password=A61oKelZu2;server=remotemysql.com;database=zltMgx2tGN;persistsecurityinfo=True</Value>
+    </Setting>
+    <Setting Name="StorageDatabaseString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;server=sql7.freesqldatabase.com;user id=sql7347467;password=LLZieSmiNX;persistsecurityinfo=True;database=sql7347467&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">server=sql7.freesqldatabase.com;user id=sql7347467;password=LLZieSmiNX;persistsecurityinfo=True;database=sql7347467</Value>
     </Setting>
   </Settings>
 </SettingsFile>

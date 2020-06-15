@@ -12,17 +12,18 @@ namespace StorageProgram.Implemantations
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly DatabaseStorage _databaseStorage;
+        //private readonly DatabaseStorage _databaseStorage;
+        private readonly DatabaseForStorage _databaseForStorage;
 
-        public UnitOfWork(DatabaseStorage databaseStorage)
+        public UnitOfWork(DatabaseForStorage databaseStorage)
         {
-            _databaseStorage = databaseStorage;
-            Storage = new StorageRepository(_databaseStorage);
-            Users = new UsersRepository(_databaseStorage);
-            Invoice = new InvoiceRepository(_databaseStorage);
-            ItemsInStockDelivery = new ItemsInStockDeliveryRepository(_databaseStorage);
-            DeliveryNote = new DeliveryNoteRepository(_databaseStorage);
-            Company = new CompanyRepository(_databaseStorage);
+            _databaseForStorage = databaseStorage;
+            Storage = new StorageRepository(_databaseForStorage);
+            Users = new UsersRepository(_databaseForStorage);
+            Invoice = new InvoiceRepository(_databaseForStorage);
+            ItemsInStockDelivery = new ItemsInStockDeliveryRepository(_databaseForStorage);
+            DeliveryNote = new DeliveryNoteRepository(_databaseForStorage);
+            Company = new CompanyRepository(_databaseForStorage);
         }
 
         public IInvoiceRepository Invoice { get; private set; }
@@ -34,12 +35,12 @@ namespace StorageProgram.Implemantations
 
         public int Complete()
         {
-            return _databaseStorage.SaveChanges();
+            return _databaseForStorage.SaveChanges();
         }
 
         public void Dispose()
         {
-            _databaseStorage.Dispose();
+            _databaseForStorage.Dispose();
         }
     }
 }

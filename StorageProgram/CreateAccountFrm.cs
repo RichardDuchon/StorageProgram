@@ -14,8 +14,8 @@ namespace StorageProgram
 {
     public partial class CreateAccountFrm : MetroFramework.Forms.MetroForm
     {
-        User user = new User();
-        UnitOfWork _unitOfWork = new UnitOfWork(new DatabaseStorage());
+        Users user = new Users();
+        UnitOfWork _unitOfWork = new UnitOfWork(new DatabaseForStorage());
 
 
         public CreateAccountFrm()

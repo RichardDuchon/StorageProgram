@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace StorageProgram.Implemantations
 {
-    class UsersRepository : Repository<User>, IUsersRepository
+    class UsersRepository : Repository<Users>, IUsersRepository
     {
-        public UsersRepository(DatabaseStorage databaseStorage) : base(databaseStorage)
+        public UsersRepository(DatabaseForStorage databaseForStorage) : base(databaseForStorage)
         {
         }
 
 
-        public DatabaseStorage database
+        public DatabaseForStorage database
         {
-            get { return _dbContext as DatabaseStorage; }
+            get { return _dbContext as DatabaseForStorage; }
         }
 
         public bool CheckIfNameExist(string nameToCheck)
@@ -27,7 +27,7 @@ namespace StorageProgram.Implemantations
             return database.Users.Any(name => name.UsersUsername == nameToCheck);
         }
 
-        public User Login(string userName, string userPassword)
+        public Users Login(string userName, string userPassword)
         {
              return database.Users.SingleOrDefault(log => log.UsersUsername == userName && log.UsersPassword == userPassword);
         }

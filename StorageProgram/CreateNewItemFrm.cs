@@ -17,7 +17,7 @@ namespace StorageProgram
         private readonly StorageFrm _storageFrm;
 
         Storage storage = new Storage();
-        UnitOfWork _unitOfWork = new UnitOfWork(new DatabaseStorage());
+        UnitOfWork _unitOfWork = new UnitOfWork(new DatabaseForStorage());
 
 
         public CreateNewItemFrm(StorageFrm storageFrm)

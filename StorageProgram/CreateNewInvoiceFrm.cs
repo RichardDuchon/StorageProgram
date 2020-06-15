@@ -16,7 +16,7 @@ namespace StorageProgram
     {
         private readonly InvoiceFrm _invoiceFrm;
         Invoice invoice = new Invoice();
-        UnitOfWork _unitOfWork = new UnitOfWork(new DatabaseStorage());
+        UnitOfWork _unitOfWork = new UnitOfWork(new DatabaseForStorage());
 
 
         public CreateNewInvoiceFrm(InvoiceFrm invoiceFrm)

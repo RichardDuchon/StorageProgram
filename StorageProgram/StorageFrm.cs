@@ -15,7 +15,7 @@ namespace StorageProgram
 {
     public partial class StorageFrm : MetroFramework.Forms.MetroForm
     {
-        UnitOfWork _unitOfWork = new UnitOfWork(new Database.DatabaseStorage());
+        UnitOfWork _unitOfWork = new UnitOfWork(new Database.DatabaseForStorage());
 
         public StorageFrm()
         {
@@ -24,11 +24,7 @@ namespace StorageProgram
 
         private void StorageFrm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'zltMgx2tGNDataSet1.Storage' table. You can move, or remove it, as needed.
-            this.storageTableAdapter.Fill(this.zltMgx2tGNDataSet1.Storage);
-
-
-
+            this.storageTableAdapter1.Fill(this.storageData.Storage);
         }
 
         private void AddItemBtn_Click(object sender, EventArgs e)

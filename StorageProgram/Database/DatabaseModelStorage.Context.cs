@@ -13,10 +13,10 @@ namespace StorageProgram.Database
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DatabaseStorage : DbContext
+    public partial class DatabaseForStorage : DbContext
     {
-        public DatabaseStorage()
-            : base("name=DatabaseStorage")
+        public DatabaseForStorage()
+            : base("name=DatabaseForStorage")
         {
         }
     
@@ -25,11 +25,11 @@ namespace StorageProgram.Database
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Storage> Storages { get; set; }
-        public virtual DbSet<DeliveryNote> DeliveryNotes { get; set; }
-        public virtual DbSet<Invoice> Invoices { get; set; }
-        public virtual DbSet<ItemsInStockDelivery> ItemsInStockDeliveries { get; set; }
-        public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<Company> Companies { get; set; }
+        public virtual DbSet<Company> Company { get; set; }
+        public virtual DbSet<DeliveryNote> DeliveryNote { get; set; }
+        public virtual DbSet<Invoice> Invoice { get; set; }
+        public virtual DbSet<ItemsInStockDelivery> ItemsInStockDelivery { get; set; }
+        public virtual DbSet<Storage> Storage { get; set; }
+        public virtual DbSet<Users> Users { get; set; }
     }
 }

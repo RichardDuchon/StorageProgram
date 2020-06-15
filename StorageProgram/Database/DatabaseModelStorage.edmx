@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ModelOfDatabaseForStorage.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="CompanyId" />
+          </Key>
+          <Property Name="CompanyId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CompanyName" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="CompanyIdentificationNumber" Type="int" Nullable="false" />
+          <Property Name="CompanyResidence" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DeliveryNote">
+          <Key>
+            <PropertyRef Name="DeliveryNoteId" />
+          </Key>
+          <Property Name="DeliveryNoteId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DeliveryNoteIndication" Type="text" Nullable="false" />
+          <Property Name="DeliveryNoteOrderOrDelivery" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="DeliveryNoteCount" Type="int" Nullable="false" />
+          <Property Name="DeliveryNoteNameOfCompany" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Invoice">
+          <Key>
+            <PropertyRef Name="InvoiceId" />
+          </Key>
+          <Property Name="InvoiceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InvoiceDesignation" Type="text" Nullable="false" />
+          <Property Name="InviceNameOfCompany" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="InvoiceAmount" Type="int" Nullable="false" />
+          <Property Name="InvoiceDate" Type="date" Nullable="false" />
+          <Property Name="InvoiceDateMaturity" Type="date" Nullable="false" />
+          <Property Name="InvoiceType" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ItemsInStockDelivery">
+          <Key>
+            <PropertyRef Name="ItemInDeliveryId" />
+          </Key>
+          <Property Name="ItemInDeliveryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ItemInDeliveryName" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="ItemInDeliveryCount" Type="int" Nullable="false" />
+          <Property Name="ItemInDeliveryDescription" Type="text" Nullable="false" />
+          <Property Name="ItemInDeliverySellPrice" Type="int" Nullable="false" />
+          <Property Name="ItemInDeliveryFromItemInStockId" Type="int" Nullable="false" />
+          <Property Name="ItemInDeliveryFromDeliveryNote" Type="int" Nullable="false" />
+          <Property Name="ItemInDeliveryOrderOrDelivery" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Storage">
+          <Key>
+            <PropertyRef Name="ItemId" />
+          </Key>
+          <Property Name="ItemId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ItemName" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="ItemCount" Type="int" Nullable="false" />
+          <Property Name="ItemDescription" Type="text" Nullable="false" />
+          <Property Name="ItemPurchasePrice" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UsersUsername" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="UsersPassword" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ModelOfDatabaseForStorageStoreContainer">
+          <EntitySet Name="Company" EntityType="Self.Company" Schema="sql7347467" store:Type="Tables" />
+          <EntitySet Name="DeliveryNote" EntityType="Self.DeliveryNote" Schema="sql7347467" store:Type="Tables" />
+          <EntitySet Name="Invoice" EntityType="Self.Invoice" Schema="sql7347467" store:Type="Tables" />
+          <EntitySet Name="ItemsInStockDelivery" EntityType="Self.ItemsInStockDelivery" Schema="sql7347467" store:Type="Tables" />
+          <EntitySet Name="Storage" EntityType="Self.Storage" Schema="sql7347467" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="sql7347467" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ModelOfDatabaseForStorage" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="CompanyId" />
+          </Key>
+          <Property Name="CompanyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CompanyName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CompanyIdentificationNumber" Type="Int32" Nullable="false" />
+          <Property Name="CompanyResidence" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DeliveryNote">
+          <Key>
+            <PropertyRef Name="DeliveryNoteId" />
+          </Key>
+          <Property Name="DeliveryNoteId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DeliveryNoteIndication" Type="String" Nullable="false" />
+          <Property Name="DeliveryNoteOrderOrDelivery" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DeliveryNoteCount" Type="Int32" Nullable="false" />
+          <Property Name="DeliveryNoteNameOfCompany" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Invoice">
+          <Key>
+            <PropertyRef Name="InvoiceId" />
+          </Key>
+          <Property Name="InvoiceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InvoiceDesignation" Type="String" Nullable="false" />
+          <Property Name="InviceNameOfCompany" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="InvoiceAmount" Type="Int32" Nullable="false" />
+          <Property Name="InvoiceDate" Type="DateTime" Nullable="false" />
+          <Property Name="InvoiceDateMaturity" Type="DateTime" Nullable="false" />
+          <Property Name="InvoiceType" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ItemsInStockDelivery">
+          <Key>
+            <PropertyRef Name="ItemInDeliveryId" />
+          </Key>
+          <Property Name="ItemInDeliveryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ItemInDeliveryName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ItemInDeliveryCount" Type="Int32" Nullable="false" />
+          <Property Name="ItemInDeliveryDescription" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ItemInDeliverySellPrice" Type="Int32" Nullable="false" />
+          <Property Name="ItemInDeliveryFromItemInStockId" Type="Int32" Nullable="false" />
+          <Property Name="ItemInDeliveryFromDeliveryNote" Type="Int32" Nullable="false" />
+          <Property Name="ItemInDeliveryOrderOrDelivery" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Storage">
+          <Key>
+            <PropertyRef Name="ItemId" />
+          </Key>
+          <Property Name="ItemId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ItemName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ItemCount" Type="Int32" Nullable="false" />
+          <Property Name="ItemDescription" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ItemPurchasePrice" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UsersUsername" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UsersPassword" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DatabaseForStorage" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Company" EntityType="Self.Company" />
+          <EntitySet Name="DeliveryNote" EntityType="Self.DeliveryNote" />
+          <EntitySet Name="Invoice" EntityType="Self.Invoice" />
+          <EntitySet Name="ItemsInStockDelivery" EntityType="Self.ItemsInStockDelivery" />
+          <EntitySet Name="Storage" EntityType="Self.Storage" />
+          <EntitySet Name="Users" EntityType="Self.Users" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelOfDatabaseForStorageStoreContainer" CdmEntityContainer="DatabaseForStorage">
+          <EntitySetMapping Name="Company">
+            <EntityTypeMapping TypeName="ModelOfDatabaseForStorage.Company">
+              <MappingFragment StoreEntitySet="Company">
+                <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="CompanyIdentificationNumber" ColumnName="CompanyIdentificationNumber" />
+                <ScalarProperty Name="CompanyResidence" ColumnName="CompanyResidence" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DeliveryNote">
+            <EntityTypeMapping TypeName="ModelOfDatabaseForStorage.DeliveryNote">
+              <MappingFragment StoreEntitySet="DeliveryNote">
+                <ScalarProperty Name="DeliveryNoteId" ColumnName="DeliveryNoteId" />
+                <ScalarProperty Name="DeliveryNoteIndication" ColumnName="DeliveryNoteIndication" />
+                <ScalarProperty Name="DeliveryNoteOrderOrDelivery" ColumnName="DeliveryNoteOrderOrDelivery" />
+                <ScalarProperty Name="DeliveryNoteCount" ColumnName="DeliveryNoteCount" />
+                <ScalarProperty Name="DeliveryNoteNameOfCompany" ColumnName="DeliveryNoteNameOfCompany" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Invoice">
+            <EntityTypeMapping TypeName="ModelOfDatabaseForStorage.Invoice">
+              <MappingFragment StoreEntitySet="Invoice">
+                <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+                <ScalarProperty Name="InvoiceDesignation" ColumnName="InvoiceDesignation" />
+                <ScalarProperty Name="InviceNameOfCompany" ColumnName="InviceNameOfCompany" />
+                <ScalarProperty Name="InvoiceAmount" ColumnName="InvoiceAmount" />
+                <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+                <ScalarProperty Name="InvoiceDateMaturity" ColumnName="InvoiceDateMaturity" />
+                <ScalarProperty Name="InvoiceType" ColumnName="InvoiceType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ItemsInStockDelivery">
+            <EntityTypeMapping TypeName="ModelOfDatabaseForStorage.ItemsInStockDelivery">
+              <MappingFragment StoreEntitySet="ItemsInStockDelivery">
+                <ScalarProperty Name="ItemInDeliveryId" ColumnName="ItemInDeliveryId" />
+                <ScalarProperty Name="ItemInDeliveryName" ColumnName="ItemInDeliveryName" />
+                <ScalarProperty Name="ItemInDeliveryCount" ColumnName="ItemInDeliveryCount" />
+                <ScalarProperty Name="ItemInDeliveryDescription" ColumnName="ItemInDeliveryDescription" />
+                <ScalarProperty Name="ItemInDeliverySellPrice" ColumnName="ItemInDeliverySellPrice" />
+                <ScalarProperty Name="ItemInDeliveryFromItemInStockId" ColumnName="ItemInDeliveryFromItemInStockId" />
+                <ScalarProperty Name="ItemInDeliveryFromDeliveryNote" ColumnName="ItemInDeliveryFromDeliveryNote" />
+                <ScalarProperty Name="ItemInDeliveryOrderOrDelivery" ColumnName="ItemInDeliveryOrderOrDelivery" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Storage">
+            <EntityTypeMapping TypeName="ModelOfDatabaseForStorage.Storage">
+              <MappingFragment StoreEntitySet="Storage">
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+                <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+                <ScalarProperty Name="ItemCount" ColumnName="ItemCount" />
+                <ScalarProperty Name="ItemDescription" ColumnName="ItemDescription" />
+                <ScalarProperty Name="ItemPurchasePrice" ColumnName="ItemPurchasePrice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="ModelOfDatabaseForStorage.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UsersUsername" ColumnName="UsersUsername" />
+                <ScalarProperty Name="UsersPassword" ColumnName="UsersPassword" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -33,11 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.InvoiceDgv = new MetroFramework.Controls.MetroGrid();
-            this.invoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.zltMgx2tGNDataSet1 = new StorageProgram.zltMgx2tGNDataSet1();
-            this.invoiceTableAdapter = new StorageProgram.zltMgx2tGNDataSet1TableAdapters.InvoiceTableAdapter();
-            this.CreateNewInvoiceBtn = new MetroFramework.Controls.MetroButton();
-            this.DelteInvoiceBtn = new MetroFramework.Controls.MetroButton();
             this.invoiceIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.invoiceDesignationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inviceNameOfCompanyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,9 +40,16 @@
             this.invoiceDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.invoiceDateMaturityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.invoiceTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.invoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.CreateNewInvoiceBtn = new MetroFramework.Controls.MetroButton();
+            this.DelteInvoiceBtn = new MetroFramework.Controls.MetroButton();
+            this.storageData = new StorageProgram.StorageData();
+            this.invoiceBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.invoiceTableAdapter1 = new StorageProgram.StorageDataTableAdapters.InvoiceTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.InvoiceDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zltMgx2tGNDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storageData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // InvoiceDgv
@@ -76,7 +78,7 @@
             this.invoiceDateDataGridViewTextBoxColumn,
             this.invoiceDateMaturityDataGridViewTextBoxColumn,
             this.invoiceTypeDataGridViewTextBoxColumn});
-            this.InvoiceDgv.DataSource = this.invoiceBindingSource;
+            this.InvoiceDgv.DataSource = this.invoiceBindingSource1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -104,40 +106,6 @@
             this.InvoiceDgv.Size = new System.Drawing.Size(638, 407);
             this.InvoiceDgv.TabIndex = 0;
             this.InvoiceDgv.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.InvoiceDgv_CellEndEdit);
-            // 
-            // invoiceBindingSource
-            // 
-            this.invoiceBindingSource.DataMember = "Invoice";
-            this.invoiceBindingSource.DataSource = this.zltMgx2tGNDataSet1;
-            // 
-            // zltMgx2tGNDataSet1
-            // 
-            this.zltMgx2tGNDataSet1.DataSetName = "zltMgx2tGNDataSet1";
-            this.zltMgx2tGNDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // invoiceTableAdapter
-            // 
-            this.invoiceTableAdapter.ClearBeforeFill = true;
-            // 
-            // CreateNewInvoiceBtn
-            // 
-            this.CreateNewInvoiceBtn.Location = new System.Drawing.Point(37, 63);
-            this.CreateNewInvoiceBtn.Name = "CreateNewInvoiceBtn";
-            this.CreateNewInvoiceBtn.Size = new System.Drawing.Size(168, 48);
-            this.CreateNewInvoiceBtn.TabIndex = 1;
-            this.CreateNewInvoiceBtn.Text = "Vytvořit novou fakturu";
-            this.CreateNewInvoiceBtn.UseSelectable = true;
-            this.CreateNewInvoiceBtn.Click += new System.EventHandler(this.CreateNewInvoiceBtn_Click);
-            // 
-            // DelteInvoiceBtn
-            // 
-            this.DelteInvoiceBtn.Location = new System.Drawing.Point(23, 447);
-            this.DelteInvoiceBtn.Name = "DelteInvoiceBtn";
-            this.DelteInvoiceBtn.Size = new System.Drawing.Size(135, 23);
-            this.DelteInvoiceBtn.TabIndex = 2;
-            this.DelteInvoiceBtn.Text = "Vymazat fakturu";
-            this.DelteInvoiceBtn.UseSelectable = true;
-            this.DelteInvoiceBtn.Click += new System.EventHandler(this.DelteInvoiceBtn_Click);
             // 
             // invoiceIdDataGridViewTextBoxColumn
             // 
@@ -186,6 +154,50 @@
             this.invoiceTypeDataGridViewTextBoxColumn.Name = "invoiceTypeDataGridViewTextBoxColumn";
             this.invoiceTypeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // invoiceBindingSource
+            // 
+            this.invoiceBindingSource.DataMember = "Invoice";
+            // 
+            // zltMgx2tGNDataSet1
+            // 
+            // 
+            // invoiceTableAdapter
+            // 
+            // 
+            // CreateNewInvoiceBtn
+            // 
+            this.CreateNewInvoiceBtn.Location = new System.Drawing.Point(37, 63);
+            this.CreateNewInvoiceBtn.Name = "CreateNewInvoiceBtn";
+            this.CreateNewInvoiceBtn.Size = new System.Drawing.Size(168, 48);
+            this.CreateNewInvoiceBtn.TabIndex = 1;
+            this.CreateNewInvoiceBtn.Text = "Vytvořit novou fakturu";
+            this.CreateNewInvoiceBtn.UseSelectable = true;
+            this.CreateNewInvoiceBtn.Click += new System.EventHandler(this.CreateNewInvoiceBtn_Click);
+            // 
+            // DelteInvoiceBtn
+            // 
+            this.DelteInvoiceBtn.Location = new System.Drawing.Point(23, 447);
+            this.DelteInvoiceBtn.Name = "DelteInvoiceBtn";
+            this.DelteInvoiceBtn.Size = new System.Drawing.Size(135, 23);
+            this.DelteInvoiceBtn.TabIndex = 2;
+            this.DelteInvoiceBtn.Text = "Vymazat fakturu";
+            this.DelteInvoiceBtn.UseSelectable = true;
+            this.DelteInvoiceBtn.Click += new System.EventHandler(this.DelteInvoiceBtn_Click);
+            // 
+            // storageData
+            // 
+            this.storageData.DataSetName = "StorageData";
+            this.storageData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // invoiceBindingSource1
+            // 
+            this.invoiceBindingSource1.DataMember = "Invoice";
+            this.invoiceBindingSource1.DataSource = this.storageData;
+            // 
+            // invoiceTableAdapter1
+            // 
+            this.invoiceTableAdapter1.ClearBeforeFill = true;
+            // 
             // InvoiceFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -199,7 +211,8 @@
             this.Load += new System.EventHandler(this.InvoiceFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.InvoiceDgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zltMgx2tGNDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storageData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -207,9 +220,7 @@
         #endregion
 
         private MetroFramework.Controls.MetroGrid InvoiceDgv;
-        private zltMgx2tGNDataSet1 zltMgx2tGNDataSet1;
         private System.Windows.Forms.BindingSource invoiceBindingSource;
-        private zltMgx2tGNDataSet1TableAdapters.InvoiceTableAdapter invoiceTableAdapter;
         private MetroFramework.Controls.MetroButton CreateNewInvoiceBtn;
         private MetroFramework.Controls.MetroButton DelteInvoiceBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn invoiceIdDataGridViewTextBoxColumn;
@@ -219,5 +230,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn invoiceDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn invoiceDateMaturityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn invoiceTypeDataGridViewTextBoxColumn;
+        private StorageData storageData;
+        private System.Windows.Forms.BindingSource invoiceBindingSource1;
+        private StorageDataTableAdapters.InvoiceTableAdapter invoiceTableAdapter1;
     }
 }

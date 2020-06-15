@@ -15,20 +15,20 @@ namespace StorageProgram.Interfaces
 {
     class StorageRepository : Repository<Storage>, IStorageRepository
     {
-        public StorageRepository(DatabaseStorage databaseStorage) : base(databaseStorage)
+        public StorageRepository(DatabaseForStorage databaseForStorage) : base(databaseForStorage)
         {
         }
 
 
         Storage IStorageRepository.GetMostInStock(int most)
         {
-            return database.Storages.Include(a => a.ItemId).SingleOrDefault(a => a.ItemId == most);
+            return database.Storage.Include(a => a.ItemId).SingleOrDefault(a => a.ItemId == most);
 
         }
 
-        public DatabaseStorage database
+        public DatabaseForStorage database
         {
-            get { return _dbContext as DatabaseStorage; }
+            get { return _dbContext as DatabaseForStorage; }
         }
     }
 }

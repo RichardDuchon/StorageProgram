@@ -18,7 +18,7 @@ namespace StorageProgram
 {
     public partial class DeliveryNoteFrm : MetroFramework.Forms.MetroForm
     {
-        UnitOfWork _unitOfWork = new UnitOfWork(new DatabaseStorage());
+        UnitOfWork _unitOfWork = new UnitOfWork(new DatabaseForStorage());
 
         int idOfItemFromStorage = 0;
         int deliveryNoteIndication = 0;
@@ -30,21 +30,14 @@ namespace StorageProgram
 
         private void DeliveryNoteFrm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'zltMgx2tGNDataSet1.ItemsInStockDelivery' table. You can move, or remove it, as needed.
-            this.itemsInStockDeliveryTableAdapter.Fill(this.zltMgx2tGNDataSet1.ItemsInStockDelivery);
-            // TODO: This line of code loads data into the 'zltMgx2tGNDataSet1.DeliveryNote' table. You can move, or remove it, as needed.
-            this.deliveryNoteTableAdapter.Fill(this.zltMgx2tGNDataSet1.DeliveryNote);
-            // TODO: This line of code loads data into the 'zltMgx2tGNDataSet1.Storage' table. You can move, or remove it, as needed.
-            this.storageTableAdapter.Fill(this.zltMgx2tGNDataSet1.Storage);
-
-
-
-
+            this.itemsInStockDeliveryTableAdapter1.Fill(this.storageData.ItemsInStockDelivery);
+            this.deliveryNoteTableAdapter1.Fill(this.storageData.DeliveryNote);
+            this.storageTableAdapter1.Fill(this.storageData.Storage);
         }
 
         private void RefreshDeliveryNoteDgv()
         {
-            deliveryNoteBindingSource.DataSource = _unitOfWork.DeliveryNote.GetAll();
+            deliveryNoteBindingSource1.DataSource = _unitOfWork.DeliveryNote.GetAll();
            
         }
 
@@ -79,20 +72,20 @@ namespace StorageProgram
 
         private void ShowDataInDeliveryNote()
         {
-            deliveryNoteBindingSource.DataSource = _unitOfWork.DeliveryNote.GetAll();
+            deliveryNoteBindingSource1.DataSource = _unitOfWork.DeliveryNote.GetAll();
 
         }
 
         private void ShowDataInStorage()
         {
-            storageBindingSource.DataSource = _unitOfWork.Storage.GetAll();
+            storageBindingSource1.DataSource = _unitOfWork.Storage.GetAll();
         }
 
         private void ShowDataInDeliveryStorageNote()
         {
             deliveryNoteIndication = Convert.ToInt32(DeliveryNoteDgv.CurrentRow.Cells["deliveryNoteIdDataGridViewTextBoxColumn"].Value);
 
-            itemsInStockDeliveryBindingSource.DataSource = _unitOfWork.ItemsInStockDelivery.ReturnSortedByDeliveryId(deliveryNoteIndication);
+            itemsInStockDeliveryBindingSource1.DataSource = _unitOfWork.ItemsInStockDelivery.ReturnSortedByDeliveryId(deliveryNoteIndication);
         }
 
         private void DeliveryNoteDgv_CellContentClick(object sender, DataGridViewCellEventArgs e)

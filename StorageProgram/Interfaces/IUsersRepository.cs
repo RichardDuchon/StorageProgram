@@ -8,9 +8,9 @@ using StorageProgram.Database;
 
 namespace StorageProgram.Interfaces
 {
-    public interface IUsersRepository : IRepository<User>
+    public interface IUsersRepository : IRepository<Users>
     {
-        User Login(string userName, string userPassword);
+        Users Login(string userName, string userPassword);
         bool CheckIfNameExist(string nameToCheck);
 
     }

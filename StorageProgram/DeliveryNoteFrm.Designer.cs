@@ -45,7 +45,6 @@
             this.itemDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemPurchasePriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.storageBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.zltMgx2tGNDataSet1 = new StorageProgram.zltMgx2tGNDataSet1();
             this.DeliveryNoteDgv = new MetroFramework.Controls.MetroGrid();
             this.deliveryNoteIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeliveryNoteNameOfCompany = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,16 +71,23 @@
             this.ItemsInStockLbl = new MetroFramework.Controls.MetroLabel();
             this.ItemsInNoteLbl = new MetroFramework.Controls.MetroLabel();
             this.OrderOrDeliveryLbl = new MetroFramework.Controls.MetroLabel();
-            this.storageTableAdapter = new StorageProgram.zltMgx2tGNDataSet1TableAdapters.StorageTableAdapter();
-            this.deliveryNoteTableAdapter = new StorageProgram.zltMgx2tGNDataSet1TableAdapters.DeliveryNoteTableAdapter();
-            this.itemsInStockDeliveryTableAdapter = new StorageProgram.zltMgx2tGNDataSet1TableAdapters.ItemsInStockDeliveryTableAdapter();
+            this.storageData = new StorageProgram.StorageData();
+            this.storageBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.storageTableAdapter1 = new StorageProgram.StorageDataTableAdapters.StorageTableAdapter();
+            this.deliveryNoteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.deliveryNoteTableAdapter1 = new StorageProgram.StorageDataTableAdapters.DeliveryNoteTableAdapter();
+            this.itemsInStockDeliveryBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.itemsInStockDeliveryTableAdapter1 = new StorageProgram.StorageDataTableAdapters.ItemsInStockDeliveryTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.StorageInDeliveryDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zltMgx2tGNDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeliveryNoteDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deliveryNoteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeliveryStorageDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsInStockDeliveryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storageData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deliveryNoteBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsInStockDeliveryBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // StorageInDeliveryDgv
@@ -108,7 +114,7 @@
             this.itemCountDataGridViewTextBoxColumn,
             this.itemDescriptionDataGridViewTextBoxColumn,
             this.itemPurchasePriceDataGridViewTextBoxColumn});
-            this.StorageInDeliveryDgv.DataSource = this.storageBindingSource;
+            this.StorageInDeliveryDgv.DataSource = this.storageBindingSource1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -182,12 +188,9 @@
             // storageBindingSource
             // 
             this.storageBindingSource.DataMember = "Storage";
-            this.storageBindingSource.DataSource = this.zltMgx2tGNDataSet1;
             // 
             // zltMgx2tGNDataSet1
             // 
-            this.zltMgx2tGNDataSet1.DataSetName = "zltMgx2tGNDataSet1";
-            this.zltMgx2tGNDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // DeliveryNoteDgv
             // 
@@ -213,7 +216,7 @@
             this.deliveryNoteIndicationDataGridViewTextBoxColumn,
             this.deliveryNoteCountDataGridViewTextBoxColumn,
             this.deliveryNoteOrderOrDeliveryDataGridViewTextBoxColumn});
-            this.DeliveryNoteDgv.DataSource = this.deliveryNoteBindingSource;
+            this.DeliveryNoteDgv.DataSource = this.deliveryNoteBindingSource1;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -285,7 +288,6 @@
             // deliveryNoteBindingSource
             // 
             this.deliveryNoteBindingSource.DataMember = "DeliveryNote";
-            this.deliveryNoteBindingSource.DataSource = this.zltMgx2tGNDataSet1;
             // 
             // DeliveryStorageDgv
             // 
@@ -314,7 +316,7 @@
             this.itemInDeliveryFromItemInStockIdDataGridViewTextBoxColumn,
             this.itemInDeliveryFromDeliveryNoteDataGridViewTextBoxColumn,
             this.itemInDeliveryOrderOrDeliveryDataGridViewTextBoxColumn});
-            this.DeliveryStorageDgv.DataSource = this.itemsInStockDeliveryBindingSource;
+            this.DeliveryStorageDgv.DataSource = this.itemsInStockDeliveryBindingSource1;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -408,7 +410,6 @@
             // itemsInStockDeliveryBindingSource
             // 
             this.itemsInStockDeliveryBindingSource.DataMember = "ItemsInStockDelivery";
-            this.itemsInStockDeliveryBindingSource.DataSource = this.zltMgx2tGNDataSet1;
             // 
             // CreateDeliveryNoteBtn
             // 
@@ -499,15 +500,44 @@
             // 
             // storageTableAdapter
             // 
-            this.storageTableAdapter.ClearBeforeFill = true;
             // 
             // deliveryNoteTableAdapter
             // 
-            this.deliveryNoteTableAdapter.ClearBeforeFill = true;
             // 
             // itemsInStockDeliveryTableAdapter
             // 
-            this.itemsInStockDeliveryTableAdapter.ClearBeforeFill = true;
+            // 
+            // storageData
+            // 
+            this.storageData.DataSetName = "StorageData";
+            this.storageData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // storageBindingSource1
+            // 
+            this.storageBindingSource1.DataMember = "Storage";
+            this.storageBindingSource1.DataSource = this.storageData;
+            // 
+            // storageTableAdapter1
+            // 
+            this.storageTableAdapter1.ClearBeforeFill = true;
+            // 
+            // deliveryNoteBindingSource1
+            // 
+            this.deliveryNoteBindingSource1.DataMember = "DeliveryNote";
+            this.deliveryNoteBindingSource1.DataSource = this.storageData;
+            // 
+            // deliveryNoteTableAdapter1
+            // 
+            this.deliveryNoteTableAdapter1.ClearBeforeFill = true;
+            // 
+            // itemsInStockDeliveryBindingSource1
+            // 
+            this.itemsInStockDeliveryBindingSource1.DataMember = "ItemsInStockDelivery";
+            this.itemsInStockDeliveryBindingSource1.DataSource = this.storageData;
+            // 
+            // itemsInStockDeliveryTableAdapter1
+            // 
+            this.itemsInStockDeliveryTableAdapter1.ClearBeforeFill = true;
             // 
             // DeliveryNoteFrm
             // 
@@ -531,11 +561,14 @@
             this.Load += new System.EventHandler(this.DeliveryNoteFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.StorageInDeliveryDgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zltMgx2tGNDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeliveryNoteDgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deliveryNoteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeliveryStorageDgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsInStockDeliveryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storageData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deliveryNoteBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsInStockDeliveryBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -546,13 +579,9 @@
         private MetroFramework.Controls.MetroGrid StorageInDeliveryDgv;
         private MetroFramework.Controls.MetroGrid DeliveryNoteDgv;
         private MetroFramework.Controls.MetroGrid DeliveryStorageDgv;
-        private zltMgx2tGNDataSet1 zltMgx2tGNDataSet1;
         private System.Windows.Forms.BindingSource storageBindingSource;
-        private zltMgx2tGNDataSet1TableAdapters.StorageTableAdapter storageTableAdapter;
         private System.Windows.Forms.BindingSource deliveryNoteBindingSource;
-        private zltMgx2tGNDataSet1TableAdapters.DeliveryNoteTableAdapter deliveryNoteTableAdapter;
         private System.Windows.Forms.BindingSource itemsInStockDeliveryBindingSource;
-        private zltMgx2tGNDataSet1TableAdapters.ItemsInStockDeliveryTableAdapter itemsInStockDeliveryTableAdapter;
         private MetroFramework.Controls.MetroButton CreateDeliveryNoteBtn;
         private MetroFramework.Controls.MetroButton CreateOrderNoteBtn;
         private MetroFramework.Controls.MetroButton AddItemToDeliveryBtn;
@@ -580,5 +609,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn deliveryNoteIndicationDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn deliveryNoteCountDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn deliveryNoteOrderOrDeliveryDataGridViewTextBoxColumn;
+        private StorageData storageData;
+        private System.Windows.Forms.BindingSource storageBindingSource1;
+        private StorageDataTableAdapters.StorageTableAdapter storageTableAdapter1;
+        private System.Windows.Forms.BindingSource deliveryNoteBindingSource1;
+        private StorageDataTableAdapters.DeliveryNoteTableAdapter deliveryNoteTableAdapter1;
+        private System.Windows.Forms.BindingSource itemsInStockDeliveryBindingSource1;
+        private StorageDataTableAdapters.ItemsInStockDeliveryTableAdapter itemsInStockDeliveryTableAdapter1;
     }
 }

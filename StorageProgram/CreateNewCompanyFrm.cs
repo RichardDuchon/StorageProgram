@@ -16,7 +16,7 @@ namespace StorageProgram
     {
         private readonly CompanyFrm _companyFrm;
         Company company = new Company();
-        UnitOfWork _unitOfWork = new UnitOfWork(new DatabaseStorage());
+        UnitOfWork _unitOfWork = new UnitOfWork(new DatabaseForStorage());
 
 
         public CreateNewCompanyFrm(CompanyFrm companyFrm)

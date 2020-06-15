@@ -11,13 +11,13 @@ namespace StorageProgram.Implemantations
 {
     class CompanyRepository : Repository<Company>, ICompanyRepository
     {
-        public CompanyRepository(DatabaseStorage databaseStorage) : base(databaseStorage)
+        public CompanyRepository(DatabaseForStorage databaseForStorage) : base(databaseForStorage)
         {
         }
 
-        public DatabaseStorage database
+        public DatabaseForStorage database
         {
-            get { return _dbContext as DatabaseStorage; }
+            get { return _dbContext as DatabaseForStorage; }
         }
     }
 }

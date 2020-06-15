@@ -139,25 +139,28 @@
       <DependentUpon>CreateNewItemFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Database\Company.cs">
-      <DependentUpon>DatabaseModel.tt</DependentUpon>
+      <DependentUpon>DatabaseModelStorage.tt</DependentUpon>
     </Compile>
-    <Compile Include="Database\DatabaseModel.Context.cs">
+    <Compile Include="Database\DatabaseModelStorage.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DatabaseModel.Context.tt</DependentUpon>
+      <DependentUpon>DatabaseModelStorage.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Database\DatabaseModel.cs">
+    <Compile Include="Database\DatabaseModelStorage.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DatabaseModel.tt</DependentUpon>
+      <DependentUpon>DatabaseModelStorage.tt</DependentUpon>
     </Compile>
-    <Compile Include="Database\DatabaseModel.Designer.cs">
+    <Compile Include="Database\DatabaseModelStorage.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DatabaseModel.edmx</DependentUpon>
+      <DependentUpon>DatabaseModelStorage.edmx</DependentUpon>
     </Compile>
     <Compile Include="Database\DeliveryNote.cs">
-      <DependentUpon>DatabaseModel.tt</DependentUpon>
+      <DependentUpon>DatabaseModelStorage.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Users.cs">
+      <DependentUpon>DatabaseModelStorage.tt</DependentUpon>
     </Compile>
     <Compile Include="DeliveryNoteFrm.cs">
       <SubType>Form</SubType>
@@ -178,7 +181,7 @@
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Implemantations\Repository.cs" />
     <Compile Include="Database\Invoice.cs">
-      <DependentUpon>DatabaseModel.tt</DependentUpon>
+      <DependentUpon>DatabaseModelStorage.tt</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IStorageRepository.cs" />
     <Compile Include="Implemantations\StorageRepository.cs" />
@@ -191,7 +194,7 @@
       <DependentUpon>InvoiceFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Database\ItemsInStockDelivery.cs">
-      <DependentUpon>DatabaseModel.tt</DependentUpon>
+      <DependentUpon>DatabaseModelStorage.tt</DependentUpon>
     </Compile>
     <Compile Include="LoginMenuFrm.cs">
       <SubType>Form</SubType>
@@ -208,24 +211,18 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Database\Storage.cs">
-      <DependentUpon>DatabaseModel.tt</DependentUpon>
+      <DependentUpon>DatabaseModelStorage.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StorageData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StorageData.xsd</DependentUpon>
     </Compile>
     <Compile Include="StorageFrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="StorageFrm.Designer.cs">
       <DependentUpon>StorageFrm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Database\User.cs">
-      <DependentUpon>DatabaseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="zltMgx2tGNDataSet1.cs">
-      <DependentUpon>zltMgx2tGNDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="zltMgx2tGNDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>zltMgx2tGNDataSet1.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="CompanyFrm.resx">
       <DependentUpon>CompanyFrm.cs</DependentUpon>
@@ -266,12 +263,12 @@
     <EmbeddedResource Include="StorageFrm.resx">
       <DependentUpon>StorageFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="Database\DatabaseModel.edmx">
+    <EntityDeploy Include="Database\DatabaseModelStorage.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DatabaseModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>DatabaseModelStorage.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Database\DatabaseModel.edmx.diagram">
-      <DependentUpon>DatabaseModel.edmx</DependentUpon>
+    <None Include="Database\DatabaseModelStorage.edmx.diagram">
+      <DependentUpon>DatabaseModelStorage.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -283,31 +280,31 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="zltMgx2tGNDataSet1.xsc">
-      <DependentUpon>zltMgx2tGNDataSet1.xsd</DependentUpon>
+    <None Include="StorageData.xsc">
+      <DependentUpon>StorageData.xsd</DependentUpon>
     </None>
-    <None Include="zltMgx2tGNDataSet1.xsd">
+    <None Include="StorageData.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>zltMgx2tGNDataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>StorageData.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="zltMgx2tGNDataSet1.xss">
-      <DependentUpon>zltMgx2tGNDataSet1.xsd</DependentUpon>
+    <None Include="StorageData.xss">
+      <DependentUpon>StorageData.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database\DatabaseModel.Context.tt">
+    <Content Include="Database\DatabaseModelStorage.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DatabaseModel.edmx</DependentUpon>
-      <LastGenOutput>DatabaseModel.Context.cs</LastGenOutput>
+      <DependentUpon>DatabaseModelStorage.edmx</DependentUpon>
+      <LastGenOutput>DatabaseModelStorage.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Database\DatabaseModel.tt">
+    <Content Include="Database\DatabaseModelStorage.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DatabaseModel.edmx</DependentUpon>
-      <LastGenOutput>DatabaseModel.cs</LastGenOutput>
+      <DependentUpon>DatabaseModelStorage.edmx</DependentUpon>
+      <LastGenOutput>DatabaseModelStorage.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

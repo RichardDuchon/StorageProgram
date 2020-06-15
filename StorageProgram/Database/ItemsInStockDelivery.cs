@@ -16,11 +16,11 @@ namespace StorageProgram.Database
     {
         public int ItemInDeliveryId { get; set; }
         public string ItemInDeliveryName { get; set; }
-        public Nullable<int> ItemInDeliveryCount { get; set; }
+        public int ItemInDeliveryCount { get; set; }
         public string ItemInDeliveryDescription { get; set; }
-        public Nullable<int> ItemInDeliverySellPrice { get; set; }
-        public Nullable<int> ItemInDeliveryFromItemInStockId { get; set; }
-        public Nullable<int> ItemInDeliveryFromDeliveryNote { get; set; }
+        public int ItemInDeliverySellPrice { get; set; }
+        public int ItemInDeliveryFromItemInStockId { get; set; }
+        public int ItemInDeliveryFromDeliveryNote { get; set; }
         public string ItemInDeliveryOrderOrDelivery { get; set; }
     }
 }

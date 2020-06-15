@@ -14,7 +14,7 @@ namespace StorageProgram
 {
     public partial class LoginMenuFrm : MetroFramework.Forms.MetroForm
     {
-        UnitOfWork _unitOfWork = new UnitOfWork(new Database.DatabaseStorage());
+        UnitOfWork _unitOfWork = new UnitOfWork(new Database.DatabaseForStorage());
 
         public LoginMenuFrm()
         {

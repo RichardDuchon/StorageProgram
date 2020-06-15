@@ -14,12 +14,12 @@ namespace StorageProgram.Implemantations
 {
     class DeliveryNoteRepository : Repository<DeliveryNote>, IDeliveryNoteRepository
     {
-        public DeliveryNoteRepository(DatabaseStorage databaseStorage) : base(databaseStorage)
+        public DeliveryNoteRepository(DatabaseForStorage databaseForStorage) : base(databaseForStorage)
         {
         }
-        public DatabaseStorage database
+        public DatabaseForStorage database
         {
-            get { return _dbContext as DatabaseStorage; }
+            get { return _dbContext as DatabaseForStorage; }
         }
 
         public void CreateOrderOrDelivery(string deliveryOrOrder)
@@ -30,12 +30,12 @@ namespace StorageProgram.Implemantations
             deliveryNote.DeliveryNoteIndication = Interaction.InputBox("Označení listu.", deliveryOrOrder, "");
             deliveryNote.DeliveryNoteNameOfCompany = "Test";
 
-            database.DeliveryNotes.Add(deliveryNote);
+            database.DeliveryNote.Add(deliveryNote);
         }
 
         public Tuple<string, int> Return(int itemToTake)
         {
-            var item = database.DeliveryNotes.Where(it => it.DeliveryNoteId == itemToTake).ToList();
+            var item = database.DeliveryNote.Where(it => it.DeliveryNoteId == itemToTake).ToList();
             
             foreach (var kos in item)
             {

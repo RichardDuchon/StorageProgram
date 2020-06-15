@@ -14,7 +14,7 @@ namespace StorageProgram
 {
     public partial class InvoiceFrm : MetroFramework.Forms.MetroForm
     {
-        UnitOfWork _unitOfWork = new UnitOfWork(new Database.DatabaseStorage());
+        UnitOfWork _unitOfWork = new UnitOfWork(new Database.DatabaseForStorage());
 
         public InvoiceFrm()
         {
@@ -23,9 +23,7 @@ namespace StorageProgram
 
         private void InvoiceFrm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'zltMgx2tGNDataSet1.Invoice' table. You can move, or remove it, as needed.
-            this.invoiceTableAdapter.Fill(this.zltMgx2tGNDataSet1.Invoice);
-
+            this.invoiceTableAdapter1.Fill(this.storageData.Invoice);
         }
 
         private void CreateNewInvoiceBtn_Click(object sender, EventArgs e)
@@ -35,7 +33,7 @@ namespace StorageProgram
         }
         public void RefreshInvoice()
         {
-            invoiceBindingSource.DataSource = _unitOfWork.Invoice.GetAll();
+            invoiceBindingSource1.DataSource = _unitOfWork.Invoice.GetAll();
         }
 
         private void DelteInvoiceBtn_Click(object sender, EventArgs e)
