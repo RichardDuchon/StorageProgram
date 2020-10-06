@@ -14,9 +14,18 @@ namespace StorageProgram.Database
     
     public partial class Company
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Company()
+        {
+            this.DeliveryNote = new HashSet<DeliveryNote>();
+        }
+    
         public int CompanyId { get; set; }
         public string CompanyName { get; set; }
-        public int CompanyIdentificationNumber { get; set; }
+        public Nullable<int> CompanyIdentificationNumber { get; set; }
         public string CompanyResidence { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DeliveryNote> DeliveryNote { get; set; }
     }
 }

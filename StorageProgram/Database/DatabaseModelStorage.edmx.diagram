@@ -5,12 +5,13 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="6eb0083e415f44c5bd7e6bac834dd29b" Name="Diagram1">
-        <EntityTypeShape EntityType="ModelOfDatabaseForStorage.Company" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ModelOfDatabaseForStorage.DeliveryNote" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ModelOfDatabaseForStorage.Invoice" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ModelOfDatabaseForStorage.ItemsInStockDelivery" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ModelOfDatabaseForStorage.Storage" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ModelOfDatabaseForStorage.Users" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelOfDatabaseForStorage.Company" Width="1.5" PointX="0.75" PointY="1.125" />
+        <EntityTypeShape EntityType="ModelOfDatabaseForStorage.DeliveryNote" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="ModelOfDatabaseForStorage.Invoice" Width="1.5" PointX="0.625" PointY="4" />
+        <EntityTypeShape EntityType="ModelOfDatabaseForStorage.ItemsInStockDelivery" Width="1.5" PointX="3.125" PointY="3.75" />
+        <EntityTypeShape EntityType="ModelOfDatabaseForStorage.Storage" Width="1.5" PointX="5.375" PointY="4.25" />
+        <EntityTypeShape EntityType="ModelOfDatabaseForStorage.Users" Width="1.5" PointX="5.75" PointY="0.75" />
+        <AssociationConnector Association="ModelOfDatabaseForStorage.FK_DeliveryNote_Company" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -24,7 +24,8 @@ namespace StorageProgram
 
         private void StorageFrm_Load(object sender, EventArgs e)
         {
-            this.storageTableAdapter1.Fill(this.storageData.Storage);
+            // TODO: This line of code loads data into the 'wkL3rf6tSaDataSet.Storage' table. You can move, or remove it, as needed.
+            this.storageTableAdapter.Fill(this.wkL3rf6tSaDataSet.Storage);
         }
 
         private void AddItemBtn_Click(object sender, EventArgs e)
@@ -35,7 +36,7 @@ namespace StorageProgram
 
         public void LoadToDataGridView()
         {
-            storageBindingSource.DataSource = _unitOfWork.Storage.GetAll();
+            storageBindingSource3.DataSource = _unitOfWork.Storage.GetAll();
         }
 
         private void DeleteItemBtn_Click(object sender, EventArgs e)

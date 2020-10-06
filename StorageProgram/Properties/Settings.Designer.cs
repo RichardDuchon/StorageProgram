@@ -55,5 +55,16 @@ namespace StorageProgram.Properties {
                 return ((string)(this["StorageDatabaseString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=remotemysql.com;user id=wkL3rf6tSa;database=wkL3rf6tSa;password=QY2494NM6P" +
+            "")]
+        public string wkL3rf6tSaConnectionString {
+            get {
+                return ((string)(this["wkL3rf6tSaConnectionString"]));
+            }
+        }
     }
 }

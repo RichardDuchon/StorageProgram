@@ -44,13 +44,14 @@
             this.itemCountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemPurchasePriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.storageBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.wkL3rf6tSaDataSet = new StorageProgram.wkL3rf6tSaDataSet();
+            this.storageBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.storageData = new StorageProgram.StorageData();
             this.storageBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DeliveryNoteDgv = new MetroFramework.Controls.MetroGrid();
-            this.deliveryNoteIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DeliveryNoteNameOfCompany = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deliveryNoteIndicationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deliveryNoteCountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deliveryNoteOrderOrDeliveryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deliveryNoteBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.deliveryNoteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.deliveryNoteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DeliveryStorageDgv = new MetroFramework.Controls.MetroGrid();
             this.itemInDeliveryIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,6 +62,8 @@
             this.itemInDeliveryFromItemInStockIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemInDeliveryFromDeliveryNoteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemInDeliveryOrderOrDeliveryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemsInStockDeliveryBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.itemsInStockDeliveryBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.itemsInStockDeliveryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.CreateDeliveryNoteBtn = new MetroFramework.Controls.MetroButton();
             this.CreateOrderNoteBtn = new MetroFramework.Controls.MetroButton();
@@ -71,23 +74,32 @@
             this.ItemsInStockLbl = new MetroFramework.Controls.MetroLabel();
             this.ItemsInNoteLbl = new MetroFramework.Controls.MetroLabel();
             this.OrderOrDeliveryLbl = new MetroFramework.Controls.MetroLabel();
-            this.storageData = new StorageProgram.StorageData();
-            this.storageBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.storageTableAdapter1 = new StorageProgram.StorageDataTableAdapters.StorageTableAdapter();
-            this.deliveryNoteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.deliveryNoteTableAdapter1 = new StorageProgram.StorageDataTableAdapters.DeliveryNoteTableAdapter();
-            this.itemsInStockDeliveryBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.itemsInStockDeliveryTableAdapter1 = new StorageProgram.StorageDataTableAdapters.ItemsInStockDeliveryTableAdapter();
+            this.storageTableAdapter = new StorageProgram.wkL3rf6tSaDataSetTableAdapters.StorageTableAdapter();
+            this.deliveryNoteTableAdapter = new StorageProgram.wkL3rf6tSaDataSetTableAdapters.DeliveryNoteTableAdapter();
+            this.itemsInStockDeliveryTableAdapter = new StorageProgram.wkL3rf6tSaDataSetTableAdapters.ItemsInStockDeliveryTableAdapter();
+            this.deliveryNoteIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Company_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeliveryNoteNameOfCompany = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deliveryNoteIndicationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deliveryNoteCountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deliveryNoteOrderOrDeliveryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.StorageInDeliveryDgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wkL3rf6tSaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storageData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeliveryNoteDgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deliveryNoteBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deliveryNoteBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deliveryNoteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeliveryStorageDgv)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemsInStockDeliveryBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storageData)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deliveryNoteBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsInStockDeliveryBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsInStockDeliveryBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsInStockDeliveryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // StorageInDeliveryDgv
@@ -114,7 +126,7 @@
             this.itemCountDataGridViewTextBoxColumn,
             this.itemDescriptionDataGridViewTextBoxColumn,
             this.itemPurchasePriceDataGridViewTextBoxColumn});
-            this.StorageInDeliveryDgv.DataSource = this.storageBindingSource1;
+            this.StorageInDeliveryDgv.DataSource = this.storageBindingSource2;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -185,12 +197,29 @@
             this.itemPurchasePriceDataGridViewTextBoxColumn.Name = "itemPurchasePriceDataGridViewTextBoxColumn";
             this.itemPurchasePriceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // storageBindingSource2
+            // 
+            this.storageBindingSource2.DataMember = "Storage";
+            this.storageBindingSource2.DataSource = this.wkL3rf6tSaDataSet;
+            // 
+            // wkL3rf6tSaDataSet
+            // 
+            this.wkL3rf6tSaDataSet.DataSetName = "wkL3rf6tSaDataSet";
+            this.wkL3rf6tSaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // storageBindingSource1
+            // 
+            this.storageBindingSource1.DataMember = "Storage";
+            this.storageBindingSource1.DataSource = this.storageData;
+            // 
+            // storageData
+            // 
+            this.storageData.DataSetName = "StorageData";
+            this.storageData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // storageBindingSource
             // 
             this.storageBindingSource.DataMember = "Storage";
-            // 
-            // zltMgx2tGNDataSet1
-            // 
             // 
             // DeliveryNoteDgv
             // 
@@ -212,11 +241,12 @@
             this.DeliveryNoteDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DeliveryNoteDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.deliveryNoteIdDataGridViewTextBoxColumn,
+            this.Company_id,
             this.DeliveryNoteNameOfCompany,
             this.deliveryNoteIndicationDataGridViewTextBoxColumn,
             this.deliveryNoteCountDataGridViewTextBoxColumn,
             this.deliveryNoteOrderOrDeliveryDataGridViewTextBoxColumn});
-            this.DeliveryNoteDgv.DataSource = this.deliveryNoteBindingSource1;
+            this.DeliveryNoteDgv.DataSource = this.deliveryNoteBindingSource2;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -248,42 +278,15 @@
             this.DeliveryNoteDgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DeliveryNoteDgv_CellContentClick);
             this.DeliveryNoteDgv.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DeliveryNoteDgv_CellContentDoubleClick);
             // 
-            // deliveryNoteIdDataGridViewTextBoxColumn
+            // deliveryNoteBindingSource2
             // 
-            this.deliveryNoteIdDataGridViewTextBoxColumn.DataPropertyName = "DeliveryNoteId";
-            this.deliveryNoteIdDataGridViewTextBoxColumn.HeaderText = "Číslo dodacího listu";
-            this.deliveryNoteIdDataGridViewTextBoxColumn.Name = "deliveryNoteIdDataGridViewTextBoxColumn";
-            this.deliveryNoteIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.deliveryNoteIdDataGridViewTextBoxColumn.Width = 150;
+            this.deliveryNoteBindingSource2.DataMember = "DeliveryNote";
+            this.deliveryNoteBindingSource2.DataSource = this.wkL3rf6tSaDataSet;
             // 
-            // DeliveryNoteNameOfCompany
+            // deliveryNoteBindingSource1
             // 
-            this.DeliveryNoteNameOfCompany.DataPropertyName = "DeliveryNoteNameOfCompany";
-            this.DeliveryNoteNameOfCompany.HeaderText = "Jméno společnosti";
-            this.DeliveryNoteNameOfCompany.Name = "DeliveryNoteNameOfCompany";
-            this.DeliveryNoteNameOfCompany.ReadOnly = true;
-            // 
-            // deliveryNoteIndicationDataGridViewTextBoxColumn
-            // 
-            this.deliveryNoteIndicationDataGridViewTextBoxColumn.DataPropertyName = "DeliveryNoteIndication";
-            this.deliveryNoteIndicationDataGridViewTextBoxColumn.HeaderText = "Označení dodacího listu";
-            this.deliveryNoteIndicationDataGridViewTextBoxColumn.Name = "deliveryNoteIndicationDataGridViewTextBoxColumn";
-            this.deliveryNoteIndicationDataGridViewTextBoxColumn.ReadOnly = true;
-            this.deliveryNoteIndicationDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // deliveryNoteCountDataGridViewTextBoxColumn
-            // 
-            this.deliveryNoteCountDataGridViewTextBoxColumn.DataPropertyName = "DeliveryNoteCount";
-            this.deliveryNoteCountDataGridViewTextBoxColumn.HeaderText = "Celková cena";
-            this.deliveryNoteCountDataGridViewTextBoxColumn.Name = "deliveryNoteCountDataGridViewTextBoxColumn";
-            this.deliveryNoteCountDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // deliveryNoteOrderOrDeliveryDataGridViewTextBoxColumn
-            // 
-            this.deliveryNoteOrderOrDeliveryDataGridViewTextBoxColumn.DataPropertyName = "DeliveryNoteOrderOrDelivery";
-            this.deliveryNoteOrderOrDeliveryDataGridViewTextBoxColumn.HeaderText = "Objednávka/výdejka";
-            this.deliveryNoteOrderOrDeliveryDataGridViewTextBoxColumn.Name = "deliveryNoteOrderOrDeliveryDataGridViewTextBoxColumn";
-            this.deliveryNoteOrderOrDeliveryDataGridViewTextBoxColumn.ReadOnly = true;
+            this.deliveryNoteBindingSource1.DataMember = "DeliveryNote";
+            this.deliveryNoteBindingSource1.DataSource = this.storageData;
             // 
             // deliveryNoteBindingSource
             // 
@@ -316,7 +319,7 @@
             this.itemInDeliveryFromItemInStockIdDataGridViewTextBoxColumn,
             this.itemInDeliveryFromDeliveryNoteDataGridViewTextBoxColumn,
             this.itemInDeliveryOrderOrDeliveryDataGridViewTextBoxColumn});
-            this.DeliveryStorageDgv.DataSource = this.itemsInStockDeliveryBindingSource1;
+            this.DeliveryStorageDgv.DataSource = this.itemsInStockDeliveryBindingSource2;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -406,6 +409,16 @@
             this.itemInDeliveryOrderOrDeliveryDataGridViewTextBoxColumn.HeaderText = "Objednávka/výdej";
             this.itemInDeliveryOrderOrDeliveryDataGridViewTextBoxColumn.Name = "itemInDeliveryOrderOrDeliveryDataGridViewTextBoxColumn";
             this.itemInDeliveryOrderOrDeliveryDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // itemsInStockDeliveryBindingSource2
+            // 
+            this.itemsInStockDeliveryBindingSource2.DataMember = "ItemsInStockDelivery";
+            this.itemsInStockDeliveryBindingSource2.DataSource = this.wkL3rf6tSaDataSet;
+            // 
+            // itemsInStockDeliveryBindingSource1
+            // 
+            this.itemsInStockDeliveryBindingSource1.DataMember = "ItemsInStockDelivery";
+            this.itemsInStockDeliveryBindingSource1.DataSource = this.storageData;
             // 
             // itemsInStockDeliveryBindingSource
             // 
@@ -498,46 +511,74 @@
             this.OrderOrDeliveryLbl.TabIndex = 11;
             this.OrderOrDeliveryLbl.Text = "Objednávky a výdejky";
             // 
-            // storageTableAdapter
-            // 
-            // 
-            // deliveryNoteTableAdapter
-            // 
-            // 
-            // itemsInStockDeliveryTableAdapter
-            // 
-            // 
-            // storageData
-            // 
-            this.storageData.DataSetName = "StorageData";
-            this.storageData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // storageBindingSource1
-            // 
-            this.storageBindingSource1.DataMember = "Storage";
-            this.storageBindingSource1.DataSource = this.storageData;
-            // 
             // storageTableAdapter1
             // 
             this.storageTableAdapter1.ClearBeforeFill = true;
-            // 
-            // deliveryNoteBindingSource1
-            // 
-            this.deliveryNoteBindingSource1.DataMember = "DeliveryNote";
-            this.deliveryNoteBindingSource1.DataSource = this.storageData;
             // 
             // deliveryNoteTableAdapter1
             // 
             this.deliveryNoteTableAdapter1.ClearBeforeFill = true;
             // 
-            // itemsInStockDeliveryBindingSource1
-            // 
-            this.itemsInStockDeliveryBindingSource1.DataMember = "ItemsInStockDelivery";
-            this.itemsInStockDeliveryBindingSource1.DataSource = this.storageData;
-            // 
             // itemsInStockDeliveryTableAdapter1
             // 
             this.itemsInStockDeliveryTableAdapter1.ClearBeforeFill = true;
+            // 
+            // storageTableAdapter
+            // 
+            this.storageTableAdapter.ClearBeforeFill = true;
+            // 
+            // deliveryNoteTableAdapter
+            // 
+            this.deliveryNoteTableAdapter.ClearBeforeFill = true;
+            // 
+            // itemsInStockDeliveryTableAdapter
+            // 
+            this.itemsInStockDeliveryTableAdapter.ClearBeforeFill = true;
+            // 
+            // deliveryNoteIdDataGridViewTextBoxColumn
+            // 
+            this.deliveryNoteIdDataGridViewTextBoxColumn.DataPropertyName = "DeliveryNoteId";
+            this.deliveryNoteIdDataGridViewTextBoxColumn.HeaderText = "Číslo dodacího listu";
+            this.deliveryNoteIdDataGridViewTextBoxColumn.Name = "deliveryNoteIdDataGridViewTextBoxColumn";
+            this.deliveryNoteIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.deliveryNoteIdDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // Company_id
+            // 
+            this.Company_id.DataPropertyName = "Company_id";
+            this.Company_id.HeaderText = "Company_id";
+            this.Company_id.Name = "Company_id";
+            this.Company_id.ReadOnly = true;
+            this.Company_id.Visible = false;
+            // 
+            // DeliveryNoteNameOfCompany
+            // 
+            this.DeliveryNoteNameOfCompany.DataPropertyName = "DeliveryNoteNameOfCompany";
+            this.DeliveryNoteNameOfCompany.HeaderText = "Jméno společnosti";
+            this.DeliveryNoteNameOfCompany.Name = "DeliveryNoteNameOfCompany";
+            this.DeliveryNoteNameOfCompany.ReadOnly = true;
+            // 
+            // deliveryNoteIndicationDataGridViewTextBoxColumn
+            // 
+            this.deliveryNoteIndicationDataGridViewTextBoxColumn.DataPropertyName = "DeliveryNoteIndication";
+            this.deliveryNoteIndicationDataGridViewTextBoxColumn.HeaderText = "Označení dodacího listu";
+            this.deliveryNoteIndicationDataGridViewTextBoxColumn.Name = "deliveryNoteIndicationDataGridViewTextBoxColumn";
+            this.deliveryNoteIndicationDataGridViewTextBoxColumn.ReadOnly = true;
+            this.deliveryNoteIndicationDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // deliveryNoteCountDataGridViewTextBoxColumn
+            // 
+            this.deliveryNoteCountDataGridViewTextBoxColumn.DataPropertyName = "DeliveryNoteCount";
+            this.deliveryNoteCountDataGridViewTextBoxColumn.HeaderText = "Celková cena";
+            this.deliveryNoteCountDataGridViewTextBoxColumn.Name = "deliveryNoteCountDataGridViewTextBoxColumn";
+            this.deliveryNoteCountDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // deliveryNoteOrderOrDeliveryDataGridViewTextBoxColumn
+            // 
+            this.deliveryNoteOrderOrDeliveryDataGridViewTextBoxColumn.DataPropertyName = "DeliveryNoteOrderOrDelivery";
+            this.deliveryNoteOrderOrDeliveryDataGridViewTextBoxColumn.HeaderText = "Objednávka/výdejka";
+            this.deliveryNoteOrderOrDeliveryDataGridViewTextBoxColumn.Name = "deliveryNoteOrderOrDeliveryDataGridViewTextBoxColumn";
+            this.deliveryNoteOrderOrDeliveryDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // DeliveryNoteFrm
             // 
@@ -560,15 +601,19 @@
             this.Text = "Dodací listy";
             this.Load += new System.EventHandler(this.DeliveryNoteFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.StorageInDeliveryDgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wkL3rf6tSaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storageData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeliveryNoteDgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deliveryNoteBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deliveryNoteBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deliveryNoteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeliveryStorageDgv)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemsInStockDeliveryBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storageData)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deliveryNoteBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsInStockDeliveryBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsInStockDeliveryBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsInStockDeliveryBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -604,11 +649,6 @@
         private MetroFramework.Controls.MetroLabel ItemsInStockLbl;
         private MetroFramework.Controls.MetroLabel ItemsInNoteLbl;
         private MetroFramework.Controls.MetroLabel OrderOrDeliveryLbl;
-        private System.Windows.Forms.DataGridViewTextBoxColumn deliveryNoteIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DeliveryNoteNameOfCompany;
-        private System.Windows.Forms.DataGridViewTextBoxColumn deliveryNoteIndicationDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn deliveryNoteCountDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn deliveryNoteOrderOrDeliveryDataGridViewTextBoxColumn;
         private StorageData storageData;
         private System.Windows.Forms.BindingSource storageBindingSource1;
         private StorageDataTableAdapters.StorageTableAdapter storageTableAdapter1;
@@ -616,5 +656,18 @@
         private StorageDataTableAdapters.DeliveryNoteTableAdapter deliveryNoteTableAdapter1;
         private System.Windows.Forms.BindingSource itemsInStockDeliveryBindingSource1;
         private StorageDataTableAdapters.ItemsInStockDeliveryTableAdapter itemsInStockDeliveryTableAdapter1;
+        private wkL3rf6tSaDataSet wkL3rf6tSaDataSet;
+        private System.Windows.Forms.BindingSource storageBindingSource2;
+        private wkL3rf6tSaDataSetTableAdapters.StorageTableAdapter storageTableAdapter;
+        private System.Windows.Forms.BindingSource deliveryNoteBindingSource2;
+        private wkL3rf6tSaDataSetTableAdapters.DeliveryNoteTableAdapter deliveryNoteTableAdapter;
+        private System.Windows.Forms.BindingSource itemsInStockDeliveryBindingSource2;
+        private wkL3rf6tSaDataSetTableAdapters.ItemsInStockDeliveryTableAdapter itemsInStockDeliveryTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn deliveryNoteIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Company_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DeliveryNoteNameOfCompany;
+        private System.Windows.Forms.DataGridViewTextBoxColumn deliveryNoteIndicationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn deliveryNoteCountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn deliveryNoteOrderOrDeliveryDataGridViewTextBoxColumn;
     }
 }

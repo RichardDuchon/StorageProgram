@@ -224,6 +224,11 @@
     <Compile Include="StorageFrm.Designer.cs">
       <DependentUpon>StorageFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="wkL3rf6tSaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wkL3rf6tSaDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CompanyFrm.resx">
       <DependentUpon>CompanyFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -290,6 +295,17 @@
     </None>
     <None Include="StorageData.xss">
       <DependentUpon>StorageData.xsd</DependentUpon>
+    </None>
+    <None Include="wkL3rf6tSaDataSet.xsc">
+      <DependentUpon>wkL3rf6tSaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="wkL3rf6tSaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>wkL3rf6tSaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="wkL3rf6tSaDataSet.xss">
+      <DependentUpon>wkL3rf6tSaDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -22,13 +22,18 @@ namespace StorageProgram.Implemantations
             get { return _dbContext as DatabaseForStorage; }
         }
 
-        public void CreateOrderOrDelivery(string deliveryOrOrder)
+        public void CreateOrderOrDelivery(string deliveryOrOrder, string companyName, int companyId)
         {
             DeliveryNote deliveryNote = new DeliveryNote();
 
+            CompanyFrm companyFrm = new CompanyFrm();
+            companyFrm.ShowDialog();
+
             deliveryNote.DeliveryNoteOrderOrDelivery = deliveryOrOrder;
             deliveryNote.DeliveryNoteIndication = Interaction.InputBox("Označení listu.", deliveryOrOrder, "");
-            deliveryNote.DeliveryNoteNameOfCompany = "Test";
+            deliveryNote.DeliveryNoteNameOfCompany = companyName;
+            deliveryNote.Company_id = 2;
+
 
             database.DeliveryNote.Add(deliveryNote);
         }
@@ -36,10 +41,10 @@ namespace StorageProgram.Implemantations
         public Tuple<string, int> Return(int itemToTake)
         {
             var item = database.DeliveryNote.Where(it => it.DeliveryNoteId == itemToTake).ToList();
-            
-            foreach (var kos in item)
+
+            foreach (var i in item)
             {
-                return Tuple.Create(kos.DeliveryNoteOrderOrDelivery, kos.DeliveryNoteId);
+                return Tuple.Create(i.DeliveryNoteOrderOrDelivery, i.DeliveryNoteId);
             }
             return null;
         }

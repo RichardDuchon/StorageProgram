@@ -26,5 +26,13 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">server=sql7.freesqldatabase.com;user id=sql7347467;password=LLZieSmiNX;persistsecurityinfo=True;database=sql7347467</Value>
     </Setting>
+    <Setting Name="wkL3rf6tSaConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;server=remotemysql.com;user id=wkL3rf6tSa;database=wkL3rf6tSa;password=QY2494NM6P&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">server=remotemysql.com;user id=wkL3rf6tSa;database=wkL3rf6tSa;password=QY2494NM6P</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

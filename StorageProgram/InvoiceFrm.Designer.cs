@@ -40,16 +40,21 @@
             this.invoiceDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.invoiceDateMaturityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.invoiceTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.invoiceBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.storageData = new StorageProgram.StorageData();
             this.invoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.CreateNewInvoiceBtn = new MetroFramework.Controls.MetroButton();
             this.DelteInvoiceBtn = new MetroFramework.Controls.MetroButton();
-            this.storageData = new StorageProgram.StorageData();
-            this.invoiceBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.invoiceTableAdapter1 = new StorageProgram.StorageDataTableAdapters.InvoiceTableAdapter();
+            this.wkL3rf6tSaDataSet = new StorageProgram.wkL3rf6tSaDataSet();
+            this.invoiceBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.invoiceTableAdapter = new StorageProgram.wkL3rf6tSaDataSetTableAdapters.InvoiceTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.InvoiceDgv)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storageData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storageData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wkL3rf6tSaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // InvoiceDgv
@@ -78,7 +83,7 @@
             this.invoiceDateDataGridViewTextBoxColumn,
             this.invoiceDateMaturityDataGridViewTextBoxColumn,
             this.invoiceTypeDataGridViewTextBoxColumn});
-            this.InvoiceDgv.DataSource = this.invoiceBindingSource1;
+            this.InvoiceDgv.DataSource = this.invoiceBindingSource2;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -154,15 +159,19 @@
             this.invoiceTypeDataGridViewTextBoxColumn.Name = "invoiceTypeDataGridViewTextBoxColumn";
             this.invoiceTypeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // invoiceBindingSource1
+            // 
+            this.invoiceBindingSource1.DataMember = "Invoice";
+            this.invoiceBindingSource1.DataSource = this.storageData;
+            // 
+            // storageData
+            // 
+            this.storageData.DataSetName = "StorageData";
+            this.storageData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // invoiceBindingSource
             // 
             this.invoiceBindingSource.DataMember = "Invoice";
-            // 
-            // zltMgx2tGNDataSet1
-            // 
-            // 
-            // invoiceTableAdapter
-            // 
             // 
             // CreateNewInvoiceBtn
             // 
@@ -184,19 +193,23 @@
             this.DelteInvoiceBtn.UseSelectable = true;
             this.DelteInvoiceBtn.Click += new System.EventHandler(this.DelteInvoiceBtn_Click);
             // 
-            // storageData
-            // 
-            this.storageData.DataSetName = "StorageData";
-            this.storageData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // invoiceBindingSource1
-            // 
-            this.invoiceBindingSource1.DataMember = "Invoice";
-            this.invoiceBindingSource1.DataSource = this.storageData;
-            // 
             // invoiceTableAdapter1
             // 
             this.invoiceTableAdapter1.ClearBeforeFill = true;
+            // 
+            // wkL3rf6tSaDataSet
+            // 
+            this.wkL3rf6tSaDataSet.DataSetName = "wkL3rf6tSaDataSet";
+            this.wkL3rf6tSaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // invoiceBindingSource2
+            // 
+            this.invoiceBindingSource2.DataMember = "Invoice";
+            this.invoiceBindingSource2.DataSource = this.wkL3rf6tSaDataSet;
+            // 
+            // invoiceTableAdapter
+            // 
+            this.invoiceTableAdapter.ClearBeforeFill = true;
             // 
             // InvoiceFrm
             // 
@@ -210,9 +223,11 @@
             this.Text = "Faktury";
             this.Load += new System.EventHandler(this.InvoiceFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.InvoiceDgv)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storageData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storageData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wkL3rf6tSaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -233,5 +248,8 @@
         private StorageData storageData;
         private System.Windows.Forms.BindingSource invoiceBindingSource1;
         private StorageDataTableAdapters.InvoiceTableAdapter invoiceTableAdapter1;
+        private wkL3rf6tSaDataSet wkL3rf6tSaDataSet;
+        private System.Windows.Forms.BindingSource invoiceBindingSource2;
+        private wkL3rf6tSaDataSetTableAdapters.InvoiceTableAdapter invoiceTableAdapter;
     }
 }

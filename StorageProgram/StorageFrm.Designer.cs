@@ -33,23 +33,30 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.StorageDgv = new MetroFramework.Controls.MetroGrid();
+            this.itemIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemCountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemPurchasePriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.storageBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.wkL3rf6tSaDataSet = new StorageProgram.wkL3rf6tSaDataSet();
+            this.storageBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.storageDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.storageData = new StorageProgram.StorageData();
             this.storageBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.AddItemBtn = new MetroFramework.Controls.MetroButton();
             this.DeleteItemBtn = new MetroFramework.Controls.MetroButton();
-            this.storageData = new StorageProgram.StorageData();
-            this.storageDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.storageBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.storageTableAdapter1 = new StorageProgram.StorageDataTableAdapters.StorageTableAdapter();
-            this.itemPurchasePriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itemDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itemCountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itemIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.storageTableAdapter = new StorageProgram.wkL3rf6tSaDataSetTableAdapters.StorageTableAdapter();
+            this.storageBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.StorageDgv)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storageData)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storageDataBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wkL3rf6tSaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storageDataBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storageData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // StorageDgv
@@ -77,7 +84,7 @@
             this.itemCountDataGridViewTextBoxColumn,
             this.itemDescriptionDataGridViewTextBoxColumn,
             this.itemPurchasePriceDataGridViewTextBoxColumn});
-            this.StorageDgv.DataSource = this.storageBindingSource1;
+            this.StorageDgv.DataSource = this.storageBindingSource3;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -106,15 +113,70 @@
             this.StorageDgv.TabIndex = 0;
             this.StorageDgv.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.StorageDgv_CellEndEdit);
             // 
+            // itemIdDataGridViewTextBoxColumn
+            // 
+            this.itemIdDataGridViewTextBoxColumn.DataPropertyName = "ItemId";
+            this.itemIdDataGridViewTextBoxColumn.HeaderText = "ItemId";
+            this.itemIdDataGridViewTextBoxColumn.Name = "itemIdDataGridViewTextBoxColumn";
+            this.itemIdDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // itemNameDataGridViewTextBoxColumn
+            // 
+            this.itemNameDataGridViewTextBoxColumn.DataPropertyName = "ItemName";
+            this.itemNameDataGridViewTextBoxColumn.FillWeight = 200F;
+            this.itemNameDataGridViewTextBoxColumn.HeaderText = "Název položky";
+            this.itemNameDataGridViewTextBoxColumn.Name = "itemNameDataGridViewTextBoxColumn";
+            this.itemNameDataGridViewTextBoxColumn.Width = 300;
+            // 
+            // itemCountDataGridViewTextBoxColumn
+            // 
+            this.itemCountDataGridViewTextBoxColumn.DataPropertyName = "ItemCount";
+            this.itemCountDataGridViewTextBoxColumn.HeaderText = "Kusů skladem";
+            this.itemCountDataGridViewTextBoxColumn.Name = "itemCountDataGridViewTextBoxColumn";
+            this.itemCountDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // itemDescriptionDataGridViewTextBoxColumn
+            // 
+            this.itemDescriptionDataGridViewTextBoxColumn.DataPropertyName = "ItemDescription";
+            this.itemDescriptionDataGridViewTextBoxColumn.HeaderText = "Popis položky";
+            this.itemDescriptionDataGridViewTextBoxColumn.Name = "itemDescriptionDataGridViewTextBoxColumn";
+            this.itemDescriptionDataGridViewTextBoxColumn.Width = 300;
+            // 
+            // itemPurchasePriceDataGridViewTextBoxColumn
+            // 
+            this.itemPurchasePriceDataGridViewTextBoxColumn.DataPropertyName = "ItemPurchasePrice";
+            this.itemPurchasePriceDataGridViewTextBoxColumn.HeaderText = "Nákupní cena";
+            this.itemPurchasePriceDataGridViewTextBoxColumn.Name = "itemPurchasePriceDataGridViewTextBoxColumn";
+            this.itemPurchasePriceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // storageBindingSource2
+            // 
+            this.storageBindingSource2.DataMember = "Storage";
+            this.storageBindingSource2.DataSource = this.wkL3rf6tSaDataSet;
+            // 
+            // wkL3rf6tSaDataSet
+            // 
+            this.wkL3rf6tSaDataSet.DataSetName = "wkL3rf6tSaDataSet";
+            this.wkL3rf6tSaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // storageBindingSource1
+            // 
+            this.storageBindingSource1.DataMember = "Storage";
+            this.storageBindingSource1.DataSource = this.storageDataBindingSource;
+            // 
+            // storageDataBindingSource
+            // 
+            this.storageDataBindingSource.DataSource = this.storageData;
+            this.storageDataBindingSource.Position = 0;
+            // 
+            // storageData
+            // 
+            this.storageData.DataSetName = "StorageData";
+            this.storageData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // storageBindingSource
             // 
             this.storageBindingSource.DataMember = "Storage";
-            // 
-            // zltMgx2tGNDataSet1
-            // 
-            // 
-            // storageTableAdapter
-            // 
             // 
             // AddItemBtn
             // 
@@ -138,60 +200,18 @@
             this.DeleteItemBtn.UseSelectable = true;
             this.DeleteItemBtn.Click += new System.EventHandler(this.DeleteItemBtn_Click);
             // 
-            // storageData
-            // 
-            this.storageData.DataSetName = "StorageData";
-            this.storageData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // storageDataBindingSource
-            // 
-            this.storageDataBindingSource.DataSource = this.storageData;
-            this.storageDataBindingSource.Position = 0;
-            // 
-            // storageBindingSource1
-            // 
-            this.storageBindingSource1.DataMember = "Storage";
-            this.storageBindingSource1.DataSource = this.storageDataBindingSource;
-            // 
             // storageTableAdapter1
             // 
             this.storageTableAdapter1.ClearBeforeFill = true;
             // 
-            // itemPurchasePriceDataGridViewTextBoxColumn
+            // storageTableAdapter
             // 
-            this.itemPurchasePriceDataGridViewTextBoxColumn.DataPropertyName = "ItemPurchasePrice";
-            this.itemPurchasePriceDataGridViewTextBoxColumn.HeaderText = "Nákupní cena";
-            this.itemPurchasePriceDataGridViewTextBoxColumn.Name = "itemPurchasePriceDataGridViewTextBoxColumn";
-            this.itemPurchasePriceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.storageTableAdapter.ClearBeforeFill = true;
             // 
-            // itemDescriptionDataGridViewTextBoxColumn
+            // storageBindingSource3
             // 
-            this.itemDescriptionDataGridViewTextBoxColumn.DataPropertyName = "ItemDescription";
-            this.itemDescriptionDataGridViewTextBoxColumn.HeaderText = "Popis položky";
-            this.itemDescriptionDataGridViewTextBoxColumn.Name = "itemDescriptionDataGridViewTextBoxColumn";
-            this.itemDescriptionDataGridViewTextBoxColumn.Width = 300;
-            // 
-            // itemCountDataGridViewTextBoxColumn
-            // 
-            this.itemCountDataGridViewTextBoxColumn.DataPropertyName = "ItemCount";
-            this.itemCountDataGridViewTextBoxColumn.HeaderText = "Kusů skladem";
-            this.itemCountDataGridViewTextBoxColumn.Name = "itemCountDataGridViewTextBoxColumn";
-            this.itemCountDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // itemNameDataGridViewTextBoxColumn
-            // 
-            this.itemNameDataGridViewTextBoxColumn.DataPropertyName = "ItemName";
-            this.itemNameDataGridViewTextBoxColumn.FillWeight = 200F;
-            this.itemNameDataGridViewTextBoxColumn.HeaderText = "Název položky";
-            this.itemNameDataGridViewTextBoxColumn.Name = "itemNameDataGridViewTextBoxColumn";
-            this.itemNameDataGridViewTextBoxColumn.Width = 300;
-            // 
-            // itemIdDataGridViewTextBoxColumn
-            // 
-            this.itemIdDataGridViewTextBoxColumn.DataPropertyName = "ItemId";
-            this.itemIdDataGridViewTextBoxColumn.HeaderText = "ItemId";
-            this.itemIdDataGridViewTextBoxColumn.Name = "itemIdDataGridViewTextBoxColumn";
-            this.itemIdDataGridViewTextBoxColumn.Visible = false;
+            this.storageBindingSource3.DataMember = "Storage";
+            this.storageBindingSource3.DataSource = this.wkL3rf6tSaDataSet;
             // 
             // StorageFrm
             // 
@@ -205,10 +225,13 @@
             this.Text = "Sklad";
             this.Load += new System.EventHandler(this.StorageFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.StorageDgv)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storageData)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storageDataBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wkL3rf6tSaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storageDataBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storageData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -228,5 +251,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn itemCountDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemDescriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemPurchasePriceDataGridViewTextBoxColumn;
+        private wkL3rf6tSaDataSet wkL3rf6tSaDataSet;
+        private System.Windows.Forms.BindingSource storageBindingSource2;
+        private wkL3rf6tSaDataSetTableAdapters.StorageTableAdapter storageTableAdapter;
+        private System.Windows.Forms.BindingSource storageBindingSource3;
     }
 }

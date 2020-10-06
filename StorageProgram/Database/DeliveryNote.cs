@@ -17,7 +17,10 @@ namespace StorageProgram.Database
         public int DeliveryNoteId { get; set; }
         public string DeliveryNoteIndication { get; set; }
         public string DeliveryNoteOrderOrDelivery { get; set; }
-        public int DeliveryNoteCount { get; set; }
+        public Nullable<int> DeliveryNoteCount { get; set; }
         public string DeliveryNoteNameOfCompany { get; set; }
+        public Nullable<int> Company_id { get; set; }
+    
+        public virtual Company Company { get; set; }
     }
 }

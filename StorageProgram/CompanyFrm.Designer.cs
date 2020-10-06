@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CompanyDgv = new MetroFramework.Controls.MetroGrid();
             this.companyIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.companyNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,10 +43,15 @@
             this.CreateNewCompanyMenuBtn = new MetroFramework.Controls.MetroButton();
             this.DeleteCompanyBtn = new MetroFramework.Controls.MetroButton();
             this.companyTableAdapter1 = new StorageProgram.StorageDataTableAdapters.CompanyTableAdapter();
+            this.wkL3rf6tSaDataSet = new StorageProgram.wkL3rf6tSaDataSet();
+            this.companyBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.companyTableAdapter = new StorageProgram.wkL3rf6tSaDataSetTableAdapters.CompanyTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.CompanyDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storageData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wkL3rf6tSaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // CompanyDgv
@@ -57,48 +62,49 @@
             this.CompanyDgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.CompanyDgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.CompanyDgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.CompanyDgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CompanyDgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.CompanyDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.CompanyDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.companyIdDataGridViewTextBoxColumn,
             this.companyNameDataGridViewTextBoxColumn,
             this.companyIdentificationNumberDataGridViewTextBoxColumn,
             this.companyResidenceDataGridViewTextBoxColumn});
-            this.CompanyDgv.DataSource = this.companyBindingSource1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.CompanyDgv.DefaultCellStyle = dataGridViewCellStyle2;
+            this.CompanyDgv.DataSource = this.companyBindingSource2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.CompanyDgv.DefaultCellStyle = dataGridViewCellStyle5;
             this.CompanyDgv.EnableHeadersVisualStyles = false;
             this.CompanyDgv.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.CompanyDgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.CompanyDgv.Location = new System.Drawing.Point(184, 63);
             this.CompanyDgv.Name = "CompanyDgv";
             this.CompanyDgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.CompanyDgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CompanyDgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.CompanyDgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.CompanyDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.CompanyDgv.Size = new System.Drawing.Size(593, 364);
             this.CompanyDgv.TabIndex = 0;
-            this.CompanyDgv.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.CompanyDgv_CellEndEdit);
+            this.CompanyDgv.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CompanyDgv_CellContentDoubleClick);
+            this.CompanyDgv.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CompanyDgv_CellDoubleClick);
             // 
             // companyIdDataGridViewTextBoxColumn
             // 
@@ -165,6 +171,20 @@
             // 
             this.companyTableAdapter1.ClearBeforeFill = true;
             // 
+            // wkL3rf6tSaDataSet
+            // 
+            this.wkL3rf6tSaDataSet.DataSetName = "wkL3rf6tSaDataSet";
+            this.wkL3rf6tSaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // companyBindingSource2
+            // 
+            this.companyBindingSource2.DataMember = "Company";
+            this.companyBindingSource2.DataSource = this.wkL3rf6tSaDataSet;
+            // 
+            // companyTableAdapter
+            // 
+            this.companyTableAdapter.ClearBeforeFill = true;
+            // 
             // CompanyFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -180,6 +200,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.storageData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wkL3rf6tSaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -197,5 +219,8 @@
         private StorageData storageData;
         private System.Windows.Forms.BindingSource companyBindingSource1;
         private StorageDataTableAdapters.CompanyTableAdapter companyTableAdapter1;
+        private wkL3rf6tSaDataSet wkL3rf6tSaDataSet;
+        private System.Windows.Forms.BindingSource companyBindingSource2;
+        private wkL3rf6tSaDataSetTableAdapters.CompanyTableAdapter companyTableAdapter;
     }
 }

@@ -17,9 +17,9 @@ namespace StorageProgram.Database
         public int InvoiceId { get; set; }
         public string InvoiceDesignation { get; set; }
         public string InviceNameOfCompany { get; set; }
-        public int InvoiceAmount { get; set; }
-        public System.DateTime InvoiceDate { get; set; }
-        public System.DateTime InvoiceDateMaturity { get; set; }
+        public Nullable<int> InvoiceAmount { get; set; }
+        public Nullable<System.DateTime> InvoiceDate { get; set; }
+        public Nullable<System.DateTime> InvoiceDateMaturity { get; set; }
         public string InvoiceType { get; set; }
     }
 }

@@ -19,6 +19,8 @@ namespace StorageProgram
     public partial class DeliveryNoteFrm : MetroFramework.Forms.MetroForm
     {
         UnitOfWork _unitOfWork = new UnitOfWork(new DatabaseForStorage());
+        public static string nameOfCompany = "";
+        public static int idOfCompany;
 
         int idOfItemFromStorage = 0;
         int deliveryNoteIndication = 0;
@@ -30,32 +32,32 @@ namespace StorageProgram
 
         private void DeliveryNoteFrm_Load(object sender, EventArgs e)
         {
-            this.itemsInStockDeliveryTableAdapter1.Fill(this.storageData.ItemsInStockDelivery);
-            this.deliveryNoteTableAdapter1.Fill(this.storageData.DeliveryNote);
-            this.storageTableAdapter1.Fill(this.storageData.Storage);
+            // TODO: This line of code loads data into the 'wkL3rf6tSaDataSet.ItemsInStockDelivery' table. You can move, or remove it, as needed.
+            this.itemsInStockDeliveryTableAdapter.Fill(this.wkL3rf6tSaDataSet.ItemsInStockDelivery);
+            // TODO: This line of code loads data into the 'wkL3rf6tSaDataSet.DeliveryNote' table. You can move, or remove it, as needed.
+            this.deliveryNoteTableAdapter.Fill(this.wkL3rf6tSaDataSet.DeliveryNote);
+            // TODO: This line of code loads data into the 'wkL3rf6tSaDataSet.Storage' table. You can move, or remove it, as needed.
+            this.storageTableAdapter.Fill(this.wkL3rf6tSaDataSet.Storage);
         }
 
         private void RefreshDeliveryNoteDgv()
         {
-            deliveryNoteBindingSource1.DataSource = _unitOfWork.DeliveryNote.GetAll();
+            deliveryNoteBindingSource2.DataSource = _unitOfWork.DeliveryNote.GetAll();
            
         }
 
         private void CreateDeliveryNoteBtn_Click(object sender, EventArgs e)
         {
             //Pokud se změní název "Dodávka." musí se změnit název i v ItemStockDeliveryRepository
-            _unitOfWork.DeliveryNote.CreateOrderOrDelivery("Dodávka.");
+            _unitOfWork.DeliveryNote.CreateOrderOrDelivery("Dodávka.", nameOfCompany, idOfCompany);
             _unitOfWork.Complete();
             RefreshDeliveryNoteDgv();
-
-
         }
 
         private void CreateOrderNoteBtn_Click(object sender, EventArgs e)
         {
             //Pokud se změní název "Objednávka." musí se změnit název i v ItemStockDeliveryRepository
-
-            _unitOfWork.DeliveryNote.CreateOrderOrDelivery("Objednávka.");
+            _unitOfWork.DeliveryNote.CreateOrderOrDelivery("Objednávka.", nameOfCompany, idOfCompany);
             _unitOfWork.Complete();
             RefreshDeliveryNoteDgv();
         }
@@ -72,13 +74,13 @@ namespace StorageProgram
 
         private void ShowDataInDeliveryNote()
         {
-            deliveryNoteBindingSource1.DataSource = _unitOfWork.DeliveryNote.GetAll();
+            deliveryNoteBindingSource2.DataSource = _unitOfWork.DeliveryNote.GetAll();
 
         }
 
         private void ShowDataInStorage()
         {
-            storageBindingSource1.DataSource = _unitOfWork.Storage.GetAll();
+            storageBindingSource2.DataSource = _unitOfWork.Storage.GetAll();
         }
 
         private void ShowDataInDeliveryStorageNote()

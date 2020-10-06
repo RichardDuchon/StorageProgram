@@ -16,8 +16,8 @@ namespace StorageProgram.Database
     {
         public int ItemId { get; set; }
         public string ItemName { get; set; }
-        public int ItemCount { get; set; }
+        public Nullable<int> ItemCount { get; set; }
         public string ItemDescription { get; set; }
-        public int ItemPurchasePrice { get; set; }
+        public Nullable<int> ItemPurchasePrice { get; set; }
     }
 }

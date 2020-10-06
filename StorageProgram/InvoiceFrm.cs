@@ -23,7 +23,8 @@ namespace StorageProgram
 
         private void InvoiceFrm_Load(object sender, EventArgs e)
         {
-            this.invoiceTableAdapter1.Fill(this.storageData.Invoice);
+            // TODO: This line of code loads data into the 'wkL3rf6tSaDataSet.Invoice' table. You can move, or remove it, as needed.
+            this.invoiceTableAdapter.Fill(this.wkL3rf6tSaDataSet.Invoice);
         }
 
         private void CreateNewInvoiceBtn_Click(object sender, EventArgs e)
@@ -33,7 +34,7 @@ namespace StorageProgram
         }
         public void RefreshInvoice()
         {
-            invoiceBindingSource1.DataSource = _unitOfWork.Invoice.GetAll();
+            invoiceBindingSource2.DataSource = _unitOfWork.Invoice.GetAll();
         }
 
         private void DelteInvoiceBtn_Click(object sender, EventArgs e)
