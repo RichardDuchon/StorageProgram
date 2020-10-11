@@ -22,17 +22,22 @@ namespace StorageProgram.Implemantations
             get { return _dbContext as DatabaseForStorage; }
         }
 
-        public void CreateOrderOrDelivery(string deliveryOrOrder, string companyName, int companyId)
+
+
+        public void CreateOrderOrDelivery(string deliveryOrOrder)
         {
             DeliveryNote deliveryNote = new DeliveryNote();
 
             CompanyFrm companyFrm = new CompanyFrm();
             companyFrm.ShowDialog();
 
+           
+            
+
             deliveryNote.DeliveryNoteOrderOrDelivery = deliveryOrOrder;
             deliveryNote.DeliveryNoteIndication = Interaction.InputBox("Označení listu.", deliveryOrOrder, "");
-            deliveryNote.DeliveryNoteNameOfCompany = companyName;
-            deliveryNote.Company_id = 2;
+            deliveryNote.DeliveryNoteNameOfCompany = database.Company.Where(x => x.CompanyId == companyFrm.idOfCompany).Single().CompanyName;
+            deliveryNote.Company_id = companyFrm.idOfCompany;
 
 
             database.DeliveryNote.Add(deliveryNote);

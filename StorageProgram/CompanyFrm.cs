@@ -16,6 +16,12 @@ namespace StorageProgram
     {
         UnitOfWork _unitOfWork = new UnitOfWork(new Database.DatabaseForStorage());
 
+        public int idOfCompany
+        {
+            get { return getCompanyId; }
+        }
+        public int getCompanyId;
+
         public CompanyFrm()
         {
             InitializeComponent();
@@ -65,11 +71,9 @@ namespace StorageProgram
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow viewRow = this.CompanyDgv.Rows[e.RowIndex];
-                viewRow.Cells["companyNameDataGridViewTextBoxColumn"].Value = DeliveryNoteFrm.nameOfCompany;
-                //viewRow.Cells["companyIdDataGridViewTextBoxColumn"].Value = DeliveryNoteFrm.idOfCompany;
-                this.Close();
-
+                getCompanyId = Convert.ToInt32(viewRow.Cells["companyIdDataGridViewTextBoxColumn"].Value);
             }
+            this.Close();
         }
 
         private void CompanyDgv_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -77,22 +81,7 @@ namespace StorageProgram
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow viewRow = this.CompanyDgv.Rows[e.RowIndex];
-                viewRow.Cells["companyNameDataGridViewTextBoxColumn"].Value = DeliveryNoteFrm.nameOfCompany;
-                //viewRow.Cells["companyIdDataGridViewTextBoxColumn"].Value = DeliveryNoteFrm.idOfCompany;
-            }
-
-            this.Close();
-        }
-
-        private void metroButton1_Click(object sender, EventArgs e)
-        {
-            if (CompanyDgv.SelectedRows.Count == 1)
-            {
-                foreach (DataGridViewRow row in CompanyDgv.SelectedRows)
-                {
-                    DeliveryNoteFrm.nameOfCompany = row.Cells["companyNameDataGridViewTextBoxColumn"].Value.ToString();
-                    DeliveryNoteFrm.idOfCompany = Convert.ToInt32(row.Cells["companyIdDataGridViewTextBoxColumn"].Value);
-                }
+                getCompanyId = Convert.ToInt32(viewRow.Cells["companyIdDataGridViewTextBoxColumn"].Value);
             }
             this.Close();
         }

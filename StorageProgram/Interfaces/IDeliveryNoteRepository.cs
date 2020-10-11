@@ -9,8 +9,7 @@ namespace StorageProgram.Interfaces
 {
     public interface IDeliveryNoteRepository : IRepository<DeliveryNote>
     {
-        void CreateOrderOrDelivery(string deliveryOrOrder, string companyName, int companyId);
-
+        void CreateOrderOrDelivery(string deliveryOrOrder);
         Tuple<string, int> Return(int itemToTake);
     }
 }

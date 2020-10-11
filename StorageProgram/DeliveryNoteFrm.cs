@@ -19,11 +19,10 @@ namespace StorageProgram
     public partial class DeliveryNoteFrm : MetroFramework.Forms.MetroForm
     {
         UnitOfWork _unitOfWork = new UnitOfWork(new DatabaseForStorage());
-        public static string nameOfCompany = "";
-        public static int idOfCompany;
 
         int idOfItemFromStorage = 0;
         int deliveryNoteIndication = 0;
+
 
         public DeliveryNoteFrm()
         {
@@ -43,21 +42,22 @@ namespace StorageProgram
         private void RefreshDeliveryNoteDgv()
         {
             deliveryNoteBindingSource2.DataSource = _unitOfWork.DeliveryNote.GetAll();
-           
+
         }
 
         private void CreateDeliveryNoteBtn_Click(object sender, EventArgs e)
         {
             //Pokud se změní název "Dodávka." musí se změnit název i v ItemStockDeliveryRepository
-            _unitOfWork.DeliveryNote.CreateOrderOrDelivery("Dodávka.", nameOfCompany, idOfCompany);
+            _unitOfWork.DeliveryNote.CreateOrderOrDelivery("Dodávka.");
             _unitOfWork.Complete();
             RefreshDeliveryNoteDgv();
         }
 
         private void CreateOrderNoteBtn_Click(object sender, EventArgs e)
         {
+
             //Pokud se změní název "Objednávka." musí se změnit název i v ItemStockDeliveryRepository
-            _unitOfWork.DeliveryNote.CreateOrderOrDelivery("Objednávka.", nameOfCompany, idOfCompany);
+            _unitOfWork.DeliveryNote.CreateOrderOrDelivery("Objednávka.");
             _unitOfWork.Complete();
             RefreshDeliveryNoteDgv();
         }
@@ -87,7 +87,7 @@ namespace StorageProgram
         {
             deliveryNoteIndication = Convert.ToInt32(DeliveryNoteDgv.CurrentRow.Cells["deliveryNoteIdDataGridViewTextBoxColumn"].Value);
 
-            itemsInStockDeliveryBindingSource1.DataSource = _unitOfWork.ItemsInStockDelivery.ReturnSortedByDeliveryId(deliveryNoteIndication);
+            itemsInStockDeliveryBindingSource2.DataSource = _unitOfWork.ItemsInStockDelivery.ReturnSortedByDeliveryId(deliveryNoteIndication);
         }
 
         private void DeliveryNoteDgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -172,8 +172,6 @@ namespace StorageProgram
             _unitOfWork.ItemsInStockDelivery.AddItemsToStorageFromOrder(Convert.ToInt32(DeliveryNoteDgv.CurrentRow.Cells["deliveryNoteIdDataGridViewTextBoxColumn"].Value));
             _unitOfWork.Complete();
             ShowDataInStorage();
-
-
         }
     }
 }
